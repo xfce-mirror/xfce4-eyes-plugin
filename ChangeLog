@@ -1,0 +1,61 @@
+2006-09-11 15:00  nick
+
+	* Update to new panel api
+	* Rename plugin: xfce4-eyes-plugin, to match the 'global'
+	  plugin names.
+	* Depend on gtk 2.6 and remove < 2.2 code
+	* Eyes with aplha channel are now properly displayed
+	* Import of gnome code
+	* Tango Icon (also default)
+	* New properties dialog
+	* Merged strings and added pot file
+
+2005-07-17 16:43  dannym
+
+	* configure.ac: fix name
+
+2005-07-17 16:40  dannym
+
+	* AUTHORS, COPYING, NEWS, README: add info files
+
+2005-07-17 16:37  dannym
+
+	* autogen.sh, xfce4-eyes.spec.in: add spec in
+
+2005-07-17 16:30  dannym
+
+	* configure.ac, po, po/ChangeLog, po/Makefile.in.in,
+	  po/POTFILES.in, po/POTFILES.in~, po/ar.po, po/az.po, po/be.po,
+	  po/bg.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po,
+	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po,
+	  po/fa.po, po/fi.po, po/fr.po, po/gu.po, po/he.po, po/hi.po,
+	  po/hu.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/mr.po,
+	  po/ms.po, po/nb_NO.po, po/nl.po, po/pa.po, po/pl.po,
+	  po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po,
+	  po/sv.po, po/ta.po, po/tr.po, po/uk.po, po/vi.po,
+	  po/xfce4-toys.pot, po/zh_CN.po, po/zh_TW.po: add translations,
+	  configure.ac
+
+2005-07-17 16:24  dannym
+
+	* xfce4-eyes, ., Makefile.am, panel-plugin,
+	  panel-plugin/Makefile.am, panel-plugin/eyes.c,
+	  panel-plugin/eyes.h, panel-plugin/themes.c,
+	  panel-plugin/themes.h, themes, themes/Bizarre,
+	  themes/Bizarre/Bizarre-eye.png,
+	  themes/Bizarre/Bizarre-pupil.png, themes/Bizarre/Makefile.am,
+	  themes/Bizarre/config, themes/Bloodshot,
+	  themes/Bloodshot/Bloodshot-eye.png,
+	  themes/Bloodshot/Bloodshot-pupil.png,
+	  themes/Bloodshot/Makefile.am, themes/Bloodshot/config,
+	  themes/Default, themes/Default-tiny,
+	  themes/Default-tiny/Default-tiny-eye.png,
+	  themes/Default-tiny/Default-tiny-pupil.png,
+	  themes/Default-tiny/Makefile.am, themes/Default-tiny/config,
+	  themes/Default/Default-eye.png,
+	  themes/Default/Default-pupil.png, themes/Default/Makefile.am,
+	  themes/Default/config, themes/Horrid,
+	  themes/Horrid/Horrid-eye.png, themes/Horrid/Horrid-pupil.png,
+	  themes/Horrid/Makefile.am, themes/Horrid/config,
+	  themes/Makefile.am: add eyes
+

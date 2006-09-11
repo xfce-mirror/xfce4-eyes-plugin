@@ -1,0 +1,28 @@
+# xfce4-eyes for XFCE
+# Copyright (C) 2003 THE xfce4-eyes'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfwm4 package.
+# Lâm Vĩnh Niên <nienvl@yahoo.ca>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-eyes 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-11 15:00+0200\n"
+"PO-Revision-Date: 2004-09-08 15:40+9\n"
+"Last-Translator: Lâm Vĩnh Niên <nienvl@yahoo.ca>\n"
+"Language-Team: none <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
+msgid "Eyes"
+msgstr "Cặp mắt"
+
+#: ../panel-plugin/eyes.c:304
+msgid "_Select a theme:"
+msgstr ""
+
+#: ../panel-plugin/eyes.desktop.in.in.h:2
+msgid "Eyes that spy on you"
+msgstr ""

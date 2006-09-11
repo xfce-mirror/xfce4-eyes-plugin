@@ -1,0 +1,29 @@
+# Japanese translation for xfce4-eyes package.
+# Copyright (C) 2003-2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the xfce4-eyes package.
+# Zhao Ji <zhao-ji@awz.ne.jp>, 2003-2004.
+# Daichi Kawahatta <daichi@xfce.org>, 2005-2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-eyes 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-11 15:00+0200\n"
+"PO-Revision-Date: 2006-01-04 19:50+0900\n"
+"Last-Translator: Daichi Kawahatta <daichi@xfce.org>\n"
+"Language-Team: Japanese <xfce-i18n@xfce.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
+msgid "Eyes"
+msgstr "めだま"
+
+#: ../panel-plugin/eyes.c:304
+msgid "_Select a theme:"
+msgstr ""
+
+#: ../panel-plugin/eyes.desktop.in.in.h:2
+msgid "Eyes that spy on you"
+msgstr ""

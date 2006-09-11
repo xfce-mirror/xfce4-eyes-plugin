@@ -1,0 +1,28 @@
+# Translation file for Xfce4's Toys.
+# Copyright (C) Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>, 2003
+# This file is distributed under the same license as the Xfce4.
+# Daniel 'Beorn' Mróz <beorn@alpha.pl>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-eyes 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-11 15:00+0200\n"
+"PO-Revision-Date: 2003-12-24 02:00+0100\n"
+"Last-Translator: Daniel 'Beorn' Mróz <beorn@alpha.pl>\n"
+"Language-Team: none <none@none>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
+msgid "Eyes"
+msgstr "Oczy"
+
+#: ../panel-plugin/eyes.c:304
+msgid "_Select a theme:"
+msgstr ""
+
+#: ../panel-plugin/eyes.desktop.in.in.h:2
+msgid "Eyes that spy on you"
+msgstr ""
