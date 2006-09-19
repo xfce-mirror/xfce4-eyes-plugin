@@ -24,8 +24,8 @@ msgstr "Begiak"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "Gai bat _hautatu:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "Zu zelatzen zaituzten begiak"
