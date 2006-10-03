@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
 "PO-Revision-Date: 2004-08-25 08:35+0200\n"
-"Last-Translator: Jasper Huijsmans <jasper@xfce.org>\n"
-"Language-Team: Nederlands <nl@li.org>\n"
+"Last-Translator: Stephan Arts <psybsd@gmail.com>\n"
+"Language-Team: Nederlands <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,8 +21,8 @@ msgstr "Ogen"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "_Selecteer een thema:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "Ogen die je bespioneren"
