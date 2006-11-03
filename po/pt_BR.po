@@ -1,15 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE xfce4-eyes'S COPYRIGHT HOLDER
+# Brazilian portuguese translations for xfce4-eyes package.
+# Copyright (C) 2006 xfce4-eyes' authors
 # This file is distributed under the same license as the xfce4-eyes package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Rodrigo Coacci <rcoacci@gmail.com>, 2006
+# Adriano Winter Bess <awbess@gmail.com>, 2006
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-eyes 4.3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
-"PO-Revision-Date: 2004-01-18 12:30-0200\n"
-"Last-Translator: Rodrigo Coacci <rcoacci@gmail.com>\n"
+"PO-Revision-Date: 2006-11-03 13:02-0200\n"
+"Last-Translator: Adriano Winter Bess <awbess@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,8 +22,8 @@ msgstr "Olhos"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "_Selecione um tema:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "Olhos que espionam você"
