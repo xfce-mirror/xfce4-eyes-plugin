@@ -1,3 +1,5 @@
+# $Id$
+
 Horriddir = $(datadir)/xfce4/eyes/themes/Horrid
 
 Horrid_DATA =								\
@@ -6,3 +8,5 @@ Horrid_DATA =								\
 	config
 
 EXTRA_DIST = $(Horrid_DATA)
+
+# vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

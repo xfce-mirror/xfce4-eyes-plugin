@@ -1,12 +1,10 @@
+# $Id$
+
 SUBDIRS =								\
 	panel-plugin							\
 	themes								\
 	icons								\
 	po
-
-AUTOMAKE_OPTIONS =							\
-	1.8								\
-	dist-bzip2
 
 distclean-local:
 	rm -rf *.spec *.cache *~
@@ -24,3 +22,5 @@ DISTCLEANFILES =							\
 	intltool-extract						\
 	intltool-merge							\
 	intltool-update
+
+# vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

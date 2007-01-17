@@ -1,4 +1,5 @@
-/*
+/* $Id$
+ * 
  * Copyright (c) Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>>
  * Copyright (c) Danny Milosavljevic <danny_milo@gmx.net>
  * Copyright (c) Dave Camp

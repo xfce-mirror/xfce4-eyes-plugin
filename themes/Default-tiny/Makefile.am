@@ -1,3 +1,5 @@
+# $Id$
+
 Default_tinydir = $(datadir)/xfce4/eyes/themes/Default-tiny
 
 Default_tiny_DATA =							\
@@ -6,3 +8,5 @@ Default_tiny_DATA =							\
 	config
 
 EXTRA_DIST = $(Default_tiny_DATA)
+
+# vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

@@ -1,3 +1,10 @@
+# $Id$
+
+INCLUDES = 								\
+	-I$(top_srcdir)							\
+	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
+	-DTHEMESDIR=\"$(datadir)/xfce4/eyes/themes\"
+
 plugindir = $(libexecdir)/xfce4/panel-plugins
 plugin_PROGRAMS = xfce4-eyes-plugin
 
@@ -8,12 +15,9 @@ xfce4_eyes_plugin_SOURCES =						\
 	themes.c
 
 xfce4_eyes_plugin_CFLAGS =						\
-	-I$(top_srcdir)							\
 	$(LIBXFCEGUI4_CFLAGS)						\
-	$(LIBXFCE4PANEL_CFLAGS)						\
-	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
-	-DTHEMESDIR=\"$(datadir)/xfce4/eyes/themes\"
-
+	$(LIBXFCE4PANEL_CFLAGS)
+	
 xfce4_eyes_plugin_LDADD =						\
 	$(LIBXFCE4PANEL_LIBS)						\
 	$(LIBXFCEGUI4_LIBS)
@@ -33,3 +37,4 @@ CLEANFILES =								\
 	$(desktop_in_files)						\
 	$(desktop_DATA)
 
+# vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
