@@ -8,21 +8,23 @@ msgstr ""
 "Project-Id-Version: xfce4-eyes 4.3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
-"PO-Revision-Date: 2004-09-12 13:05+0300\n"
-"Last-Translator: Ales Nyakhaychyk <nab@mail.by>\n"
+"PO-Revision-Date: 2007-01-20 12:11+0300\n"
+"Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
+#: ../panel-plugin/eyes.c:288
+#: ../panel-plugin/eyes.desktop.in.in.h:1
 msgid "Eyes"
 msgstr "Вочы"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "Вы_лучэньне тэмы:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "Вочы, якія сочаць за вамі"
+
