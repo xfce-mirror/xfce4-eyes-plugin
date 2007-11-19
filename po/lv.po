@@ -1,0 +1,30 @@
+# Latvian translation of xfce4-eyes.po
+# Copyright (C) YEAR THE xfce4-eyes'S COPYRIGHT HOLDER.
+# This file is distributed under the same license as the xfce4-eyes package.
+# Rihards Prieditis <RPrieditis@inbox.lv>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-eyes 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-11 15:00+0200\n"
+"PO-Revision-Date: 2007-11-16 23:35+0300\n"
+"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
+"Language-Team: Latvian <rprieditis@inbox.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../panel-plugin/eyes.c:288
+#: ../panel-plugin/eyes.desktop.in.in.h:1
+msgid "Eyes"
+msgstr "Acis"
+
+#: ../panel-plugin/eyes.c:304
+msgid "_Select a theme:"
+msgstr "_Izvēlaties tēmu:"
+
+#: ../panel-plugin/eyes.desktop.in.in.h:2
+msgid "Eyes that spy on you"
+msgstr "Acis, kas spiego tevi"
+
