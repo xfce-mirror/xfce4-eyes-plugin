@@ -1,28 +1,31 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE xfce4-eyes'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-eyes package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# French translations for the xfce4-eyes-plugin package.
+# Copyright (C) Free Software Foundation
+# This file is distributed under the same license as the xfce4-eyes-plugin package.
+# Jaime Buffery <nestu@lunar-linux.org>, 2004
+# Abel Martín <abel.martin.ruiz@gmail.com>, 2008
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-eyes 4.3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
-"PO-Revision-Date: 2004-01-13 00:00+0100\n"
-"Last-Translator: Jaime Buffery <nestu@lunar-linux.org>\n"
+"PO-Revision-Date: 2008-11-02 20:43+0100\n"
+"Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
+#: ../panel-plugin/eyes.c:288
+#: ../panel-plugin/eyes.desktop.in.in.h:1
 msgid "Eyes"
 msgstr "Ojos"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "_Seleccionar un tema:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "Ojos que te espían"
+
