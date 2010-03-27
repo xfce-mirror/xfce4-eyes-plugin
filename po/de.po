@@ -12,8 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../panel-plugin/eyes.c:288
-#: ../panel-plugin/eyes.desktop.in.in.h:1
+#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
 msgid "Eyes"
 msgstr "Augen"
 
@@ -23,5 +22,4 @@ msgstr "_Thema auswählen:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr "Augen, die spionieren!"
-
+msgstr "Augen, die Ihnen zuschauen!"
