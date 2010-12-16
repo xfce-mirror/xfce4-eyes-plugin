@@ -1,5 +1,3 @@
-# $Id$
-
 Tangodir = $(datadir)/xfce4/eyes/themes/Tango
 
 Tango_DATA =								\

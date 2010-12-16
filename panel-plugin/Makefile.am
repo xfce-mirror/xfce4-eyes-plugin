@@ -1,5 +1,3 @@
-# $Id$
-
 INCLUDES = 								\
 	-I$(top_srcdir)							\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\

@@ -1,5 +1,3 @@
-# $Id$
-
 Bloodshotdir = $(datadir)/xfce4/eyes/themes/Bloodshot
 
 Bloodshot_DATA =							\

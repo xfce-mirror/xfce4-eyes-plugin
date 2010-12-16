@@ -1,5 +1,3 @@
-# $Id$
-
 SUBDIRS = 						\
 	Bizarre						\
 	Bloodshot					\

@@ -1,5 +1,3 @@
-# $Id$
-
 Horriddir = $(datadir)/xfce4/eyes/themes/Horrid
 
 Horrid_DATA =								\

@@ -1,5 +1,3 @@
-dnl $Id$
-dnl
 dnl xfce4-eyes-plugin - eyes that spy on you
 dnl
 
@@ -10,8 +8,8 @@ m4_define([eyes_version_major], [4])
 m4_define([eyes_version_minor], [4])
 m4_define([eyes_version_micro], [0])
 m4_define([eyes_version_build], [r@REVISION@])
-m4_define([eyes_version_tag], [svn])
-m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_version_micro()ifelse(eyes_version_tag(), [svn], [eyes_version_tag()-eyes_version_build()], [eyes_version_tag()])])
+m4_define([eyes_version_tag], [git])
+m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_version_micro()ifelse(eyes_version_tag(), [git], [eyes_version_tag()-eyes_version_build()], [eyes_version_tag()])])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
@@ -21,7 +19,6 @@ AC_COPYRIGHT([Copyright (c) 2006-2007
 AC_INIT([xfce4-eyes-plugin], [eyes_version], [http://bugzilla.xfce.org/], [xfce4-eyes-plugin])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
-AC_REVISION([$Id])
 
 dnl ***************************
 dnl *** Initialize automake ***
@@ -71,7 +68,6 @@ XDT_FEATURE_DEBUG()
 
 AC_OUTPUT([
 Makefile
-xfce4-eyes.spec
 po/Makefile.in
 panel-plugin/Makefile
 icons/Makefile

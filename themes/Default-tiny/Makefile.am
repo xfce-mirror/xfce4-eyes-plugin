@@ -1,5 +1,3 @@
-# $Id$
-
 Default_tinydir = $(datadir)/xfce4/eyes/themes/Default-tiny
 
 Default_tiny_DATA =							\

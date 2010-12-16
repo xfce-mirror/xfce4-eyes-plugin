@@ -1,5 +1,3 @@
-# $Id$
-
 Bizarredir = $(datadir)/xfce4/eyes/themes/Bizarre
 
 Bizarre_DATA =								\

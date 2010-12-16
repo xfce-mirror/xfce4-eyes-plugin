@@ -1,5 +1,3 @@
-# $Id$
-
 Defaultdir = $(datadir)/xfce4/eyes/themes/Default
 
 Default_DATA =								\
