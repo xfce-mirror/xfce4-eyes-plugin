@@ -32,6 +32,7 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
