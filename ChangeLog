@@ -1,71 +1,519 @@
-2008-09-22 Mike Massonnet <mmassonnet@xfce.org>
+commit 3084a9baad65904a50621ae5fb7daf74794198b4
+Author: Florian Rivoal <frivoal@xfce.org>
+Date:   Thu Dec 16 14:18:52 2010 +0900
 
-	* Fix build for libtool 2.2 (or at least for ArchLinux)
+    Clean up
 
-2007-01-17 Nick Schermer <nick@xfce.org>
+commit 23d9b4720d832ecbc36793d4186fa22c28fee839
+Author: Florian Rivoal <frivoal@xfce.org>
+Date:   Thu Dec 16 14:03:24 2010 +0900
 
-	* Improve configure and make files.
-	* Bump version for release.
-	* Set svn keywords.
+    Add missing header file
+    
+    Fixes bug #6024
 
-2006-09-11 15:00  nick
+commit 5fd51ae7af1cf2104c98186d5645d4a3d58361df
+Author: Yaron Shahrabani <sh.yaron@gmail.com>
+Date:   Tue Aug 17 03:03:03 2010 +0200
 
-	* Update to new panel api
-	* Rename plugin: xfce4-eyes-plugin, to match the 'global'
-	  plugin names.
-	* Depend on gtk 2.6 and remove < 2.2 code
-	* Eyes with aplha channel are now properly displayed
-	* Import of gnome code
-	* Tango Icon (also default)
-	* New properties dialog
-	* Merged strings and added pot file
+    l10n: Updated Hebrew (he) translation to 100%
+    
+    New status: 3 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
 
-2005-07-17 16:43  dannym
+commit 58376fe59dd71273540214cf0729284ee9737e77
+Author: Bauzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:   Fri Aug 13 11:23:05 2010 +0200
 
-	* configure.ac: fix name
+    l10n: New translation to Kazakh.
+    
+    New status: 3 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
 
-2005-07-17 16:40  dannym
+commit 05e6db7cc5ebbd30b4d562924792e2c0afcb70bd
+Author: Gheyret Kenji <gheyret@yahoo.com>
+Date:   Fri Jul 30 02:45:43 2010 +0200
 
-	* AUTHORS, COPYING, NEWS, README: add info files
+    l10n: Uyghur translation
+    
+    New status: 3 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
 
-2005-07-17 16:37  dannym
+commit 622f38631f1324c2d11e220ac24dc4af4d5c291a
+Author: Fabian Nowak <timystery@arcor.de>
+Date:   Sat Mar 27 18:46:19 2010 +0100
 
-	* autogen.sh, xfce4-eyes.spec.in: add spec in
+    l10n: Updated German (de) translation to 100%
+    
+    New status: 3 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
 
-2005-07-17 16:30  dannym
+commit f12d92ecdb5d97e1ab1ca44d4a8695266f66988a
+Author: Dmitrij Smirnov <arch@cnc-parts.info>
+Date:   Tue Mar 2 17:05:17 2010 +0100
 
-	* configure.ac, po, po/ChangeLog, po/Makefile.in.in,
-	  po/POTFILES.in, po/POTFILES.in~, po/ar.po, po/az.po, po/be.po,
-	  po/bg.po, po/bn_IN.po, po/ca.po, po/cs.po, po/de.po,
-	  po/en_GB.po, po/es.po, po/es_MX.po, po/et.po, po/eu.po,
-	  po/fa.po, po/fi.po, po/fr.po, po/gu.po, po/he.po, po/hi.po,
-	  po/hu.po, po/it.po, po/ja.po, po/ko.po, po/lt.po, po/mr.po,
-	  po/ms.po, po/nb_NO.po, po/nl.po, po/pa.po, po/pl.po,
-	  po/pt_BR.po, po/pt_PT.po, po/ro.po, po/ru.po, po/sk.po,
-	  po/sv.po, po/ta.po, po/tr.po, po/uk.po, po/vi.po,
-	  po/xfce4-toys.pot, po/zh_CN.po, po/zh_TW.po: add translations,
-	  configure.ac
+    l10n: Updated Russian (ru) translation to 100%
+    
+    New status: 3 messages complete with 0 fuzzies and 0 untranslated.
+    
+    Transmitted-via: Transifex (translations.xfce.org).
 
-2005-07-17 16:24  dannym
+commit 9b40bf09e2b9e463cb5e4220a48100583dda713e
+Author: Leandro Regueiro <leandro.regueiro@gmail.com>
+Date:   Thu Oct 1 15:23:41 2009 +0000
 
-	* xfce4-eyes, ., Makefile.am, panel-plugin,
-	  panel-plugin/Makefile.am, panel-plugin/eyes.c,
-	  panel-plugin/eyes.h, panel-plugin/themes.c,
-	  panel-plugin/themes.h, themes, themes/Bizarre,
-	  themes/Bizarre/Bizarre-eye.png,
-	  themes/Bizarre/Bizarre-pupil.png, themes/Bizarre/Makefile.am,
-	  themes/Bizarre/config, themes/Bloodshot,
-	  themes/Bloodshot/Bloodshot-eye.png,
-	  themes/Bloodshot/Bloodshot-pupil.png,
-	  themes/Bloodshot/Makefile.am, themes/Bloodshot/config,
-	  themes/Default, themes/Default-tiny,
-	  themes/Default-tiny/Default-tiny-eye.png,
-	  themes/Default-tiny/Default-tiny-pupil.png,
-	  themes/Default-tiny/Makefile.am, themes/Default-tiny/config,
-	  themes/Default/Default-eye.png,
-	  themes/Default/Default-pupil.png, themes/Default/Makefile.am,
-	  themes/Default/config, themes/Horrid,
-	  themes/Horrid/Horrid-eye.png, themes/Horrid/Horrid-pupil.png,
-	  themes/Horrid/Makefile.am, themes/Horrid/config,
-	  themes/Makefile.am: add eyes
+    l10n: Updates to Galician (gl) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
 
+commit b3cddd0883e5660dfc53ec2e4363126553ef529f
+Author: Robert Hartl <hartl.robert@gmail.com>
+Date:   Sun Sep 13 15:46:55 2009 +0000
+
+    l10n: Updates to Slovak (sk) translation
+    
+    Transmitted-via: Transifex (translations.xfce.org)
+
+commit 1d3c637f8a17794e7746cc1a54bcdfc8ea2e9b0a
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Sat Aug 8 13:41:32 2009 +0000
+
+    update goodies translation
+    
+    (Old svn revision: 7896)
+
+commit 08b423e628ec536891b981a62f94fc87923fc06e
+Author: Gabor Kelemen <kelemeng@gnome.hu>
+Date:   Thu Jul 23 22:39:05 2009 +0000
+
+    2009-07-24  Gabor Kelemen  <kelemeng@gnome.hu>
+    
+    	* hu.po: Translation updated.
+    
+    
+    (Old svn revision: 7780)
+
+commit 91029a807f91b922063a1c56601312793ecb2a52
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Tue Jun 9 20:43:09 2009 +0000
+
+    Drop svn:executable bit from po files
+    
+    (Old svn revision: 7518)
+
+commit 0d5dd48096679bc560da55ded06fffc681842407
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Fri May 29 10:44:34 2009 +0000
+
+    update goodies translations
+    
+    (Old svn revision: 7436)
+
+commit fd45da05f42e78c6b9acad061a8d54a3ccf95bcb
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Apr 16 08:20:27 2009 +0000
+
+    goodies translation update
+    
+    (Old svn revision: 7213)
+
+commit e4f625406efe9fd2e389f6107dd2220f9c89c538
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sat Mar 14 15:26:30 2009 +0000
+
+    Translations updates - es fr gl it tr
+    
+    (Old svn revision: 6902)
+
+commit bb8b7a2bccf335da036f51bb272f11725b5475cc
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Mar 5 20:12:29 2009 +0000
+
+    Fix the renaming of the pt nb files -- thanks to jerome who noticed this problem
+    
+    (Old svn revision: 6850)
+
+commit 950e50b57226e71c55d9176823159ad45d11deca
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Mar 5 14:53:41 2009 +0000
+
+    Renamed pt_PT to pt and nb_NO to nb (bug #4574)
+    
+    (Old svn revision: 6848)
+
+commit c4879b5f18ac82fd1cd0c50b977b497177f5e503
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Sun Feb 22 22:57:36 2009 +0000
+
+    Update translations -- Remove executable property on all po files (only da.po actuall)
+    
+    (Old svn revision: 6759)
+
+commit ab28aee0fb94bb19de71bd1ce1e336442f31c00b
+Author: Alexander Toresson <alexander.toresson@gmail.com>
+Date:   Sat Dec 13 21:13:55 2008 +0000
+
+    xfce4-systemload-plugin/trunk/po:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    xfce4-netload-plugin/trunk/po:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    xfce4-eyes-plugin/trunk/po:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    xfbib/trunk/po:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    xfce4-fsguard-plugin/trunk/po:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    xfce4-places-plugin/trunk/po:
+    	* sv.po: Swedish translation update (Daniel Nylander)
+    
+    (Old svn revision: 6304)
+
+commit 0242633ece4b95175d8bf20e89e4575483688f12
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sat Dec 13 14:34:32 2008 +0000
+
+    Translations updates - ja uk zh_CN
+    
+    (Old svn revision: 6298)
+
+commit eba0fe3385953fd7a24648b14f10b1f85a0d970d
+Author: Eren Turkay <turkay.eren@gmail.com>
+Date:   Sun Nov 16 18:09:40 2008 +0000
+
+    Update Turkish translation
+    
+    (Old svn revision: 6120)
+
+commit 117f274fdc3381994c07044e3c1e0f576e06f1cf
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Wed Nov 12 10:59:45 2008 +0000
+
+    Some goodies Basque translation update
+    
+    
+    (Old svn revision: 6068)
+
+commit 784073eb0de4b3619fc12d76cf6557b54d739aab
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Nov 9 23:17:35 2008 +0000
+
+    Translations updates for a lot of languages in a lot of packages
+    
+    (Old svn revision: 6041)
+
+commit 58b12c7488e75d52f6f6f0757a0690dac8e8d8db
+Author: Lars Nielsen <lars@mit-web.dk>
+Date:   Sat Oct 11 21:46:53 2008 +0000
+
+    	* da.po: Danish translation update
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (Old svn revision: 5573)
+
+commit 0b49ad9dfb5fffe0e2827c27fe393b4b17bbc69e
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Mon Sep 22 07:44:15 2008 +0000
+
+    Fix build for libtool 2.2 (or at least for ArchLinux)
+    
+    (Old svn revision: 5431)
+
+commit ebc74c6247141c24ce3cc36010ff87c41ec57795
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Mon Jul 14 07:27:43 2008 +0000
+
+    Translations added and updated for most goodies (gl;pt_PT;zh_CN)
+    
+    (Old svn revision: 5072)
+
+commit f912c8cc6e09a7f97141e58f98263686dda643ef
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Wed Jun 25 21:44:02 2008 +0000
+
+    Translations added for most goodies (id)
+    
+    (Old svn revision: 4996)
+
+commit 3d3474ea67c67e33f4090b203d09c229bc5856a5
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Tue May 27 00:21:25 2008 +0000
+
+    update-po
+    
+    (Old svn revision: 4846)
+
+commit 98e0b6726c7945c2e3e4ff807a1d1cf69db8599c
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Wed May 14 08:45:04 2008 +0000
+
+    update japanese translation
+    
+    (Old svn revision: 4795)
+
+commit f4360ca9605ac319d2a33b6278b0f96e8cb6bc26
+Author: Stavros Giannouris <stavrosg2002@freemail.gr>
+Date:   Sat May 10 00:14:09 2008 +0000
+
+    Greek translation updates by me and Evaggelos Balaskas
+    
+    (Old svn revision: 4764)
+
+commit b761381c55c9bd79f91c36dd1cc8246d4cdd2e33
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Mon Nov 19 23:06:36 2007 +0000
+
+    Latvian translations added to most goodies.
+    
+    (Old svn revision: 3611)
+
+commit 9e6a492d10ee46ca95179733d0d1c047940fa771
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Nov 15 08:37:37 2007 +0000
+
+    Fix changelogs for updated ur.po files, and add thunar-archive-plugin
+    
+    (Old svn revision: 3591)
+
+commit 638179632e308f3e34db9c3a0ad15aa2c704f3eb
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Thu Nov 15 08:24:33 2007 +0000
+
+    Rename pk.po to ur.po
+    
+    (Old svn revision: 3590)
+
+commit d08387ea5fa2c30d3d9cf4ff649d7c5667901f46
+Author: Mike Massonnet <mmassonnet@xfce.org>
+Date:   Sun Oct 28 19:05:17 2007 +0000
+
+    Add new translation by محمد علي المكي <makki.ma@gmail.com>
+    
+    (Old svn revision: 3466)
+
+commit 185417e12b060a0a4ad33629913678773bba9929
+Author: Brian Tarricone <brian@tarricone.org>
+Date:   Wed Oct 24 22:36:53 2007 +0000
+
+    remove trailing parens on AC_INIT version info to work around bug
+    in intltool 0.35.x and 0.36.x
+    
+    
+    (Old svn revision: 3434)
+
+commit 67dd6d9b45b940ac43adc5abe8b72952cf3b381f
+Author: Og Maciel <ogmaciel@gnome.org>
+Date:   Sat Aug 25 23:30:29 2007 +0000
+
+    Updated translations for Brazilian Portuguese by Vladimir Melo.
+    
+    (Old svn revision: 3076)
+
+commit 487a8d3f8ff5b5ee498426f000351a394e1d161c
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Jul 8 21:34:59 2007 +0000
+
+    Last bunch of pt_PT and nb_NO files to be added.
+    
+    (Old svn revision: 2900)
+
+commit f8df9c95663cf91346521da8e59a32fee989a507
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Sun Jul 8 20:18:00 2007 +0000
+
+    * nb_NO.po: Norwegian Bokmal translations added
+    * pt_PT.po: European Portuguese translations added
+    
+    
+    (Old svn revision: 2898)
+
+commit edc1fef518367b2592757e5b7b706743d71aeedf
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Wed Jun 20 20:32:39 2007 +0000
+
+    * en_GB.po: British English translation for the mount plugin package updated
+    * pt_PT.po: European Portuguese translation update
+    
+    
+    (Old svn revision: 2843)
+
+commit f169e10fac8f1848fc082c61f94cb7ae101d2234
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Wed Jun 13 22:36:38 2007 +0000
+
+    * it.po: Updated translations for the verve, thunar-media-tags, thunar-archive, battery, clipman, netload thunar-volman, eyes, cpufrew, notification-daemon and mailwatch plugins.
+    * *.po: Fixed some headers
+    
+    
+    (Old svn revision: 2825)
+
+commit b5ff3aeda6491cea2524bcb2c32e8697e4115c2a
+Author: Pau Rullan Ferragut <paurullan@bulma.net>
+Date:   Sat Mar 31 07:26:59 2007 +0000
+
+    i18n british translation
+    
+    (Old svn revision: 2614)
+
+commit d825461cb5caa4b0ccc90fa325beb905d761701e
+Author: Maxim Dziumanenko <mvd@mylinux.com.ua>
+Date:   Tue Mar 13 15:01:41 2007 +0000
+
+    2007-03-13 Maxim Dziumanenko <dziumanenko@gmail.com>
+    
+    	* Update Ukrainian translation by Dmitry Nikitin.
+    
+    
+    
+    (Old svn revision: 2548)
+
+commit 43b696bcf879b29ea5cffd94c9a673114304d1f5
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Fri Feb 2 18:52:37 2007 +0000
+
+    Added the Albanian translations by Besnik Bleta for all the goodies.
+    
+    (Old svn revision: 2480)
+
+commit 6e22fb9662592b699042fbca6e8374d6a4fb8470
+Author: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>
+Date:   Sat Jan 20 11:58:52 2007 +0000
+
+    Updated Finnish translations
+    
+    
+    (Old svn revision: 2443)
+
+commit a9e6a09fa2dd9b4aca7429d12f51e62be952d047
+Author: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>
+Date:   Sat Jan 20 10:12:05 2007 +0000
+
+    2007-01-20  Alexander Nyakhaychyk  <nyakhaychyk@gmail.com>
+    
+    	* be.po: Updated Belarusian Translation
+    
+    
+    
+    (Old svn revision: 2436)
+
+commit 9a6c68184ad8abb362b93723f62015495a596ee8
+Author: Nick Schermer <nick@xfce.org>
+Date:   Wed Jan 17 17:46:35 2007 +0000
+
+    * Improve configure and make files.
+    * Bump version for release.
+    * Set svn keywords.
+    
+    
+    (Old svn revision: 2397)
+
+commit 9b84ce6f4ad6ca5ea9f2244b4451bd9247c6ed89
+Author: SZERVÁC Attila <sas@321.hu>
+Date:   Sun Dec 17 19:49:36 2006 +0000
+
+    little header fixes
+    
+    (Old svn revision: 2248)
+
+commit 5c5eafb4c4b38b17a3f836a5076623b57f05954d
+Author: Pau Rullan Ferragut <paurullan@bulma.net>
+Date:   Fri Dec 15 07:14:59 2006 +0000
+
+    i18n update
+    
+    (Old svn revision: 2222)
+
+commit 9eb8fa7e2935b31275d421646e731b21787ad65d
+Author: Maximilian Schleiss <maxschleiss@solnet.ch>
+Date:   Mon Dec 11 19:37:27 2006 +0000
+
+    Updated the Korean translations for eyes and sensors plugins by ByungHyun Choi
+    
+    (Old svn revision: 2209)
+
+commit 17f4e3a15700a594acc64993b5cdb1e39800d5bc
+Author: Adriano Winter Bess <awbess@gmail.com>
+Date:   Fri Nov 3 20:01:11 2006 +0000
+
+    Updated brazilian portuguese translations.
+    
+    
+    (Old svn revision: 2141)
+
+commit cac6055ee68203c47867f2710bf166ca577aa2f6
+Author: Jean-François Wauthy <pollux@xfce.org>
+Date:   Tue Oct 3 16:34:19 2006 +0000
+
+    updated translations
+    
+    (Old svn revision: 2085)
+
+commit 2d690a3650d432b0cb914655a58d4c39d0bceaf5
+Author: Jean-François Wauthy <pollux@xfce.org>
+Date:   Sat Sep 23 11:30:43 2006 +0000
+
+    various translations updates
+    
+    (Old svn revision: 2066)
+
+commit 66f98b664ba9e1b9e0142f4b2d415dfe0c56d10f
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Tue Sep 19 07:40:40 2006 +0000
+
+    Add/update some godies basque translations
+    
+    
+    
+    (Old svn revision: 2056)
+
+commit 93eccd57a63686b9f721ce4ab1bb134a6fc20591
+Author: Jean-François Wauthy <pollux@xfce.org>
+Date:   Sun Sep 17 20:09:46 2006 +0000
+
+    Update French and Polish translations
+    
+    (Old svn revision: 2039)
+
+commit 0630a23586f7fbadc0279abcef5f65c4f4a68fd2
+Author: SZERVÁC Attila <sas@321.hu>
+Date:   Tue Sep 12 06:26:00 2006 +0000
+
+    hu trunk: updates
+    
+    (Old svn revision: 2022)
+
+commit 2dc8facea735a8250ccdd22aa4ee7999a276cf9c
+Author: Nick Schermer <nick@xfce.org>
+Date:   Mon Sep 11 13:47:32 2006 +0000
+
+    * Commit new eyes plugin.
+    
+    
+    (Old svn revision: 2018)
