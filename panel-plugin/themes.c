@@ -24,7 +24,9 @@
 #include <ctype.h>
 
 #include <gtk/gtk.h>
+
 #include "eyes.h"
+#include "themes.h"
 
 gchar *theme_directories[] = {
     THEMESDIR

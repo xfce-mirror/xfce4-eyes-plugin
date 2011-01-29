@@ -489,13 +489,12 @@ eyes_plugin_new (XfcePanelPlugin* plugin)
     eyes->plugin = plugin;
 
     eyes->ebox = gtk_event_box_new ();
-    gtk_widget_show(GTK_WIDGET(eyes->ebox));
+    gtk_event_box_set_visible_window (GTK_EVENT_BOX (eyes->ebox), FALSE);
+    gtk_widget_show(eyes->ebox);
 
     eyes->align = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
-
-    gtk_widget_show(GTK_WIDGET(eyes->align));
-
-    gtk_container_add(GTK_CONTAINER(eyes->ebox), GTK_WIDGET(eyes->align));
+    gtk_container_add(GTK_CONTAINER(eyes->ebox), eyes->align);
+    gtk_widget_show(eyes->align);
 
     eyes_read_rc_file (plugin, eyes);
 
