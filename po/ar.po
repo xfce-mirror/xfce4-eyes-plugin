@@ -5,24 +5,28 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-eyes 4.3.0\n"
+"Project-Id-Version: xfce4-eyes-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
-"PO-Revision-Date: 2004-2-8 8:23+0300\n"
-"Last-Translator: saleh alhathal <hathalsal@hotmail.com>\n"
-"Language-Team: arabic\n"
+"PO-Revision-Date: 2011-08-12 04:50-0000\n"
+"Last-Translator: كريم أولاد الشلحة <herr.linux88@gmail.com>\n"
+"Language-Team: Arabic Xfce Translation Team <herr.linux88@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: Morocco\n"
 
-#: ../panel-plugin/eyes.c:288 ../panel-plugin/eyes.desktop.in.in.h:1
+#: ../panel-plugin/eyes.c:288
+#: ../panel-plugin/eyes.desktop.in.in.h:1
 msgid "Eyes"
 msgstr "عيون"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "ح_دد سمة:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "العيون تراقبك"
+
