@@ -26,5 +26,5 @@ msgstr "选择主题(_S)："
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr "盯着您的眼睛"
+msgstr "窥视着您的眼睛"
 
