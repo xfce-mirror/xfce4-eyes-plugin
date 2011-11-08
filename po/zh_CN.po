@@ -1,16 +1,14 @@
-# #-#-#-#-#  zh_CN.po (xfce4-eyes)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE xfce4-eyes'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-eyes package.
+# This file is distributed under the same license as 
+# the xfce4-eyes-plugin package.
 # Chipong Luo <chipong_l@yahoo.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-eyes\n"
+"Project-Id-Version: xfce4-eyes-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
 "PO-Revision-Date: 2008-12-06 05:00+0800\n"
 "Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
-"Language-Team: Simplified Chinese <i18n-translation@lists.linux.net.cn>\n"
+"Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
