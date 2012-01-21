@@ -21,8 +21,8 @@ msgstr "Akys"
 
 #: ../panel-plugin/eyes.c:304
 msgid "_Select a theme:"
-msgstr ""
+msgstr "_Pasirinkite temą:"
 
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
-msgstr ""
+msgstr "Akys kurios jus seka"
