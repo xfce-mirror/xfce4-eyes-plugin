@@ -2,7 +2,7 @@
 # the xfce4-eyes-plugin package.
 # This file is distributed under the same license as
 # the xfce4-eyes-plugin package.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-11 15:00+0200\n"
 "PO-Revision-Date: 2008-12-06 05:00+0800\n"
-"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -29,4 +29,3 @@ msgstr "选择主题(_S)："
 #: ../panel-plugin/eyes.desktop.in.in.h:2
 msgid "Eyes that spy on you"
 msgstr "窥视着您的眼睛"
-
