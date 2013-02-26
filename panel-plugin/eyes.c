@@ -44,6 +44,13 @@
 #define UPDATE_TIMEOUT 100
 
 
+/***************************
+ *** Function Prototypes ***
+ ***************************/
+static void eyes_write_rc_file (XfcePanelPlugin *plugin,
+                                EyesPlugin      *eyes);
+
+
 /*****************************
  *** Eyes Plugin Functions ***
  *****************************/
@@ -248,6 +255,8 @@ eyes_properties_dialog_response (GtkWidget  *dlg,
                                  EyesPlugin *eyes)
 {
     xfce_panel_plugin_unblock_menu (eyes->plugin);
+
+    eyes_write_rc_file (eyes->plugin, eyes);
 
     gtk_widget_destroy (dlg);
 }
