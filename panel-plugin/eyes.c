@@ -415,6 +415,8 @@ eyes_orientation_changed (XfcePanelPlugin *plugin,
         gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 0.0, 1.0);
     else
         gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 1.0, 0.0);
+
+    eyes_set_size (plugin, xfce_panel_plugin_get_size (plugin));
 }
 
 
