@@ -548,4 +548,4 @@ eyes_construct (XfcePanelPlugin *plugin)
     xfce_panel_plugin_add_action_widget (plugin, eyes->ebox);
 }
 
-XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL (eyes_construct);
+XFCE_PANEL_PLUGIN_REGISTER (eyes_construct)

@@ -4,4 +4,5 @@ Encoding=UTF-8
 _Name=Eyes
 _Comment=Eyes that spy on you
 Icon=xfce4-eyes
-X-XFCE-Exec=@libexecdir@/xfce4/panel-plugins/xfce4-eyes-plugin
+X-XFCE-Internal=FALSE
+X-XFCE-Module=eyes
