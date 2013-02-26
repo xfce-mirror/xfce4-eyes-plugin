@@ -1,4 +1,4 @@
-INCLUDES = 								\
+AM_CPPFLAGS = 								\
 	-I$(top_srcdir)							\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	-DTHEMESDIR=\"$(datadir)/xfce4/eyes/themes\"
@@ -15,7 +15,7 @@ xfce4_eyes_plugin_SOURCES =						\
 xfce4_eyes_plugin_CFLAGS =						\
 	$(LIBXFCE4UI_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)
-	
+
 xfce4_eyes_plugin_LDADD =						\
 	$(LIBXFCE4PANEL_LIBS)						\
 	$(LIBXFCE4UI_LIBS)
