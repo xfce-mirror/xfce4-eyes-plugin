@@ -56,8 +56,11 @@ static void eyes_write_rc_file (XfcePanelPlugin *plugin,
  *****************************/
 static void
 calculate_pupil_xy (EyesPlugin *eyes_applet,
-		    gint x, gint y,
-		    gint *pupil_x, gint *pupil_y, GtkWidget* widget)
+                    gint x,
+                    gint y,
+                    gint *pupil_x,
+                    gint *pupil_y,
+                    GtkWidget *widget)
 {
 	double sina;
 	double cosa;
@@ -70,18 +73,25 @@ calculate_pupil_xy (EyesPlugin *eyes_applet,
 
 	width = GTK_WIDGET(widget)->allocation.width;
 	height = GTK_WIDGET(widget)->allocation.height;
-	gtk_misc_get_alignment(GTK_MISC(widget),  &xalign, &yalign);
+	gtk_misc_get_alignment(GTK_MISC(widget), &xalign, &yalign);
 
-	nx = x - MAX(width - eyes_applet->eye_width, 0) * xalign - eyes_applet->eye_width / 2;
-	ny = y - MAX(height- eyes_applet->eye_height, 0) * yalign - eyes_applet->eye_height / 2;
+	nx = x - (MAX(width - eyes_applet->eye_width, 0)
+			  * xalign - eyes_applet->eye_width / 2)
+		- GTK_WIDGET(widget)->allocation.x;
+	ny = y - (MAX(height - eyes_applet->eye_height, 0)
+			  * yalign - eyes_applet->eye_height / 2)
+		- GTK_WIDGET(widget)->allocation.y;
 
 	h = hypot (nx, ny);
-    if (h < 0.5 || abs (h)
-		< (abs (hypot (eyes_applet->eye_height / 2, eyes_applet->eye_width / 2)) - eyes_applet->wall_thickness - eyes_applet->pupil_height))
+	if (h < 0.5 ||
+		abs (h) < (abs (hypot (eyes_applet->eye_height / 2,
+							   eyes_applet->eye_width / 2))
+				   - eyes_applet->wall_thickness
+				   - eyes_applet->pupil_height))
 	{
-			*pupil_x = nx + eyes_applet->eye_width / 2;
-			*pupil_y = ny + eyes_applet->eye_height / 2;
-			return;
+		*pupil_x = nx + eyes_applet->eye_width / 2;
+		*pupil_y = ny + eyes_applet->eye_height / 2;
+		return;
 	}
 
 	sina = nx / h;
