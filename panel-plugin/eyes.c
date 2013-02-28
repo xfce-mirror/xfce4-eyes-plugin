@@ -50,6 +50,10 @@
 static void eyes_write_rc_file (XfcePanelPlugin *plugin,
                                 EyesPlugin      *eyes);
 
+static gboolean eyes_set_size (XfcePanelPlugin *plugin,
+                               gint             size,
+                               EyesPlugin      *eyes);
+
 
 /*****************************
  *** Eyes Plugin Functions ***
@@ -286,6 +290,9 @@ combobox_changed (GtkComboBox    *combobox,
 	properties_load(eyes);
     setup_eyes(eyes);
     eyes_applet_fill(eyes);
+
+    eyes_set_size(eyes->plugin, xfce_panel_plugin_get_size(eyes->plugin),
+                  eyes);
 }
 
 
@@ -404,38 +411,81 @@ eyes_free_data(XfcePanelPlugin *plugin,
 
 static gboolean
 eyes_set_size (XfcePanelPlugin *plugin,
-               int              size)
+               gint             size,
+               EyesPlugin      *eyes)
 {
-    if (xfce_panel_plugin_get_orientation (plugin) ==
-        GTK_ORIENTATION_HORIZONTAL)
+#if LIBXFCE4PANEL_CHECK_VERSION(4,9,0)
+    XfcePanelPluginMode mode = xfce_panel_plugin_get_mode (plugin);
+    guint rows = xfce_panel_plugin_get_nrows (plugin);
+    gint x, y;
+
+    /* if there is enough space in a row, keep the plugin small */
+    if (rows > 1 && eyes->eye_width * eyes->num_eyes < size / rows)
     {
-        gtk_widget_set_size_request (GTK_WIDGET (plugin),
-                     -1, size);
+        xfce_panel_plugin_set_small (plugin, TRUE);
+        size /= rows;
+    }
+    else
+        xfce_panel_plugin_set_small (plugin, FALSE);
+
+    if (rows > 1 || mode == XFCE_PANEL_PLUGIN_MODE_HORIZONTAL)
+    {
+        x = -1;
+        y = size;
     }
     else
     {
-        gtk_widget_set_size_request (GTK_WIDGET (plugin),
-                     size, -1);
+        x = size;
+        y = -1;
     }
+
+    gtk_widget_set_size_request (GTK_WIDGET (plugin), x, y);
+#else
+    if (xfce_panel_plugin_get_orientation (plugin) ==
+        GTK_ORIENTATION_HORIZONTAL)
+        gtk_widget_set_size_request (GTK_WIDGET (plugin), -1, size);
+    else
+        gtk_widget_set_size_request (GTK_WIDGET (plugin), size, -1);
+#endif
 
     return TRUE;
 }
 
 
+#if LIBXFCE4PANEL_CHECK_VERSION(4,9,0)
+static gboolean
+eyes_mode_changed (XfcePanelPlugin     *plugin,
+                   XfcePanelPluginMode  mode,
+                   EyesPlugin          *eyes)
+{
+    if (mode == XFCE_PANEL_PLUGIN_MODE_VERTICAL ||
+        mode == XFCE_PANEL_PLUGIN_MODE_DESKBAR)
+        gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 0.0, 1.0);
+    else
+        gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 1.0, 0.0);
+
+    eyes_set_size (plugin, xfce_panel_plugin_get_size (plugin), eyes);
+
+    return TRUE;
+}
+
+
+#else
+
 
 static void
 eyes_orientation_changed (XfcePanelPlugin *plugin,
                           GtkOrientation   orientation,
-                          EyesPlugin          *eyes)
+                          EyesPlugin      *eyes)
 {
     if (orientation == GTK_ORIENTATION_VERTICAL)
         gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 0.0, 1.0);
     else
         gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 1.0, 0.0);
 
-    eyes_set_size (plugin, xfce_panel_plugin_get_size (plugin));
+    eyes_set_size (plugin, xfce_panel_plugin_get_size (plugin), eyes);
 }
-
+#endif
 
 
 static void
@@ -535,11 +585,16 @@ eyes_construct (XfcePanelPlugin *plugin)
 
     eyes = eyes_plugin_new (plugin);
 
+#if LIBXFCE4PANEL_CHECK_VERSION(4,9,0)
+    g_signal_connect (plugin, "mode-changed",
+              G_CALLBACK (eyes_mode_changed), eyes);
+#else
     g_signal_connect (plugin, "orientation-changed",
               G_CALLBACK (eyes_orientation_changed), eyes);
+#endif
 
     g_signal_connect (plugin, "size-changed",
-              G_CALLBACK (eyes_set_size), NULL);
+              G_CALLBACK (eyes_set_size), eyes);
 
     g_signal_connect (plugin, "free-data",
               G_CALLBACK (eyes_free_data), eyes);
