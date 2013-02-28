@@ -75,12 +75,10 @@ calculate_pupil_xy (EyesPlugin *eyes_applet,
 	height = GTK_WIDGET(widget)->allocation.height;
 	gtk_misc_get_alignment(GTK_MISC(widget), &xalign, &yalign);
 
-	nx = x - (MAX(width - eyes_applet->eye_width, 0)
-			  * xalign - eyes_applet->eye_width / 2)
-		- GTK_WIDGET(widget)->allocation.x;
-	ny = y - (MAX(height - eyes_applet->eye_height, 0)
-			  * yalign - eyes_applet->eye_height / 2)
-		- GTK_WIDGET(widget)->allocation.y;
+	nx = x - MAX(width - eyes_applet->eye_width, 0) * xalign
+		- eyes_applet->eye_width / 2 - GTK_WIDGET(widget)->allocation.x;
+	ny = y - MAX(height - eyes_applet->eye_height, 0) * yalign
+		- eyes_applet->eye_height / 2 - GTK_WIDGET(widget)->allocation.y;
 
 	h = hypot (nx, ny);
 	if (h < 0.5 ||
