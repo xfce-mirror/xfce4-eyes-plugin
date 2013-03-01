@@ -34,6 +34,7 @@ typedef struct
 	GtkWidget   *align;
 	GtkWidget   *hbox;
 	GtkWidget   **eyes;
+	gboolean     single_row;
 	guint        timeout_id;
 	gint 	    *pointer_last_x;
 	gint 	    *pointer_last_y;

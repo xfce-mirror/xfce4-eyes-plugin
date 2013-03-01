@@ -297,11 +297,23 @@ combobox_changed (GtkComboBox    *combobox,
 
 
 
+#if LIBXFCE4PANEL_CHECK_VERSION(4,9,0)
+static void
+check_single_row_toggled (GtkWidget  *check,
+                          EyesPlugin *eyes)
+{
+    eyes->single_row = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check));
+    eyes_set_size(eyes->plugin, xfce_panel_plugin_get_size(eyes->plugin),
+                  eyes);
+}
+#endif
+
+
 static void
 eyes_properties_dialog (XfcePanelPlugin *plugin,
                         EyesPlugin      *eyes)
 {
-	GtkWidget   *dlg, *hbox, *label, *combobox;
+	GtkWidget   *dlg, *hbox, *label, *combobox, *check;
 	GDir        *dir;
 	gint         i;
 	gchar       *current;
@@ -360,6 +372,14 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
     g_signal_connect(G_OBJECT(combobox), "changed",
             G_CALLBACK(combobox_changed), eyes);
 
+#if LIBXFCE4PANEL_CHECK_VERSION(4,9,0)
+    check = gtk_check_button_new_with_mnemonic
+        (_("Use single _row in multi-row panel"));
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), eyes->single_row);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), check, FALSE, FALSE, 0);
+    g_signal_connect(check, "toggled", G_CALLBACK(check_single_row_toggled), eyes);
+#endif
+
     gtk_widget_show_all (dlg);
 }
 
@@ -415,31 +435,8 @@ eyes_set_size (XfcePanelPlugin *plugin,
                EyesPlugin      *eyes)
 {
 #if LIBXFCE4PANEL_CHECK_VERSION(4,9,0)
-    XfcePanelPluginMode mode = xfce_panel_plugin_get_mode (plugin);
-    guint rows = xfce_panel_plugin_get_nrows (plugin);
-    gint x, y;
-
-    /* if there is enough space in a row, keep the plugin small */
-    if (rows > 1 && eyes->eye_width * eyes->num_eyes < size / rows)
-    {
-        xfce_panel_plugin_set_small (plugin, TRUE);
-        size /= rows;
-    }
-    else
-        xfce_panel_plugin_set_small (plugin, FALSE);
-
-    if (rows > 1 || mode == XFCE_PANEL_PLUGIN_MODE_HORIZONTAL)
-    {
-        x = -1;
-        y = size;
-    }
-    else
-    {
-        x = size;
-        y = -1;
-    }
-
-    gtk_widget_set_size_request (GTK_WIDGET (plugin), x, y);
+    xfce_panel_plugin_set_small (plugin, eyes->single_row);
+    gtk_widget_set_size_request (GTK_WIDGET (plugin), -1, -1);
 #else
     if (xfce_panel_plugin_get_orientation (plugin) ==
         GTK_ORIENTATION_HORIZONTAL)
@@ -514,6 +511,9 @@ eyes_read_rc_file (XfcePanelPlugin *plugin,
             if (tmp != NULL)
                 eyes->active_theme = g_strdup (tmp);
 
+            eyes->single_row =
+                xfce_rc_read_bool_entry (rc, "single_row", FALSE);
+
             xfce_rc_close (rc);
         }
     }
@@ -542,6 +542,8 @@ eyes_write_rc_file (XfcePanelPlugin *plugin,
 
     if (eyes->active_theme != NULL)
         xfce_rc_write_entry (rc, "theme", eyes->active_theme);
+
+    xfce_rc_write_bool_entry (rc, "single_row", eyes->single_row);
 
     xfce_rc_close (rc);
 }
