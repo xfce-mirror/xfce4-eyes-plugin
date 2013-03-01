@@ -1,5 +1,15 @@
-4.4.1 (2010/12/18):
+4.4.2 (2013-02-28):
 -------------------
+ * Support for deskbar mode and panel multi-row config (>=xfce4-panel-4.9.0).
+ * Make eye movement independent, like in xeyes (bug #9036).
+ * Build the plugin as a module.
+ * Autotools update (automake-1.13 compatibility and other issues).
+ * Fix remembering theme (bug #9035).
+ * Update size after panel orientation change (bug #8404).
+ * More translation updates.
+ * Port to libxfce4ui (bug #8074).
 
+4.4.1 (2010-12-18):
+-------------------
  * Translated into 11 more languages, for a total of 54, 36 of which are fully translated.
- * Fix compile issues, resolving bug # 5740 and 6024
+ * Fix compile issues, resolving bugs #5740 and #6024
