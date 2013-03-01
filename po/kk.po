@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-11 15:00+0200\n"
+"POT-Creation-Date: 2013-03-01 17:32+0100\n"
 "PO-Revision-Date: 2010-08-13 15:23+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
@@ -19,16 +19,18 @@ msgstr ""
 "X-Poedit-Language: Kazakh\n"
 "X-Poedit-Country: KAZAKHSTAN\n"
 
-#: ../panel-plugin/eyes.c:288
-#: ../panel-plugin/eyes.desktop.in.in.h:1
+#: ../panel-plugin/eyes.c:324 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
 msgstr "Көздер"
 
-#: ../panel-plugin/eyes.c:304
+#: ../panel-plugin/eyes.c:340
 msgid "_Select a theme:"
 msgstr "_Теманы таңдаңыз:"
 
-#: ../panel-plugin/eyes.desktop.in.in.h:2
+#: ../panel-plugin/eyes.c:377
+msgid "Use single _row in multi-row panel"
+msgstr ""
+
+#: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
 msgstr "Сізге бақылайтын көздер"
-
