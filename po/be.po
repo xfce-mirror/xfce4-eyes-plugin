@@ -26,7 +26,7 @@ msgstr "Вы_лучэньне тэмы:"
 
 #: ../panel-plugin/eyes.c:377
 msgid "Use single _row in multi-row panel"
-msgstr "Ужываць адзін радок на шматрадковай панэлі"
+msgstr "Ужываць адзін _радок на шматрадковай панэлі"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
