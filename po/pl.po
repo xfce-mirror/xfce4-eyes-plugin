@@ -2,7 +2,7 @@
 # Copyright (C) Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>, 2003
 # This file is distributed under the same license as the Xfce4.
 # Daniel 'Beorn' Mróz <beorn@alpha.pl>.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-eyes 4.3.0\n"
@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2003-12-24 02:00+0100\n"
 "Last-Translator: Piotr Maliński <admin@rk.edu.pl>\n"
 "Language-Team: none <none@none>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
 #: ../panel-plugin/eyes.c:324 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
@@ -26,7 +26,7 @@ msgstr "_Styl:"
 
 #: ../panel-plugin/eyes.c:377
 msgid "Use single _row in multi-row panel"
-msgstr ""
+msgstr "Zajmowanie jednego _wiersza na panelu z wieloma wierszami"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
