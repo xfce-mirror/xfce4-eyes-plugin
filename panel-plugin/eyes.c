@@ -162,12 +162,17 @@ timer_cb(EyesPlugin *eyes)
 
             if ((x != eyes->pointer_last_x[i]) || (y != eyes->pointer_last_y[i]))
             {
-
                 calculate_pupil_xy (eyes, x, y, &pupil_x, &pupil_y, eyes->eyes[i]);
                 draw_eye (eyes, i, pupil_x, pupil_y);
 
                 eyes->pointer_last_x[i] = x;
                 eyes->pointer_last_y[i] = y;
+            }
+            else
+            {
+                /* pointer position did not change since last poll, so
+                   why would it be different for the remaining eyes? */
+                break;
             }
         }
     }
