@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce4-eyes package.
 # Nuno Donato <nunodonato@gmail.com>, 2004.
 # Nuno Miguel <nunis@netcabo.pt>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-eyes 4.3.0\n"
@@ -12,10 +12,10 @@ msgstr ""
 "PO-Revision-Date: 2007-06-14 23:31+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
-"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
 
 #: ../panel-plugin/eyes.c:324 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
@@ -27,7 +27,7 @@ msgstr "_Selecione um tema:"
 
 #: ../panel-plugin/eyes.c:377
 msgid "Use single _row in multi-row panel"
-msgstr ""
+msgstr "Utiliza_r uma linha no painel multi-linha"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
