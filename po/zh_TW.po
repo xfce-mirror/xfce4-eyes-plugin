@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: xfce4-eyes 4.3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-01 17:32+0100\n"
-"PO-Revision-Date: 2012-01-15 11:53+0800\n"
+"PO-Revision-Date: 2013-03-03 10:10+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: <>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../panel-plugin/eyes.c:324 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
@@ -25,8 +25,8 @@ msgstr "選取主題(_S)："
 
 #: ../panel-plugin/eyes.c:377
 msgid "Use single _row in multi-row panel"
-msgstr ""
+msgstr "多列面板中使用單一列(_R)"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
-msgstr "盯住你的眼睛"
+msgstr "盯著您看的眼睛"
