@@ -43,7 +43,7 @@
 /* for xml: */
 #define EYES_ROOT      "Eyes"
 #define DEFAULTTHEME   "Tango"
-#define UPDATE_TIMEOUT 100
+#define UPDATE_TIMEOUT 50
 
 
 /***************************
