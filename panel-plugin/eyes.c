@@ -68,11 +68,10 @@ calculate_pupil_xy (EyesPlugin *eyes_applet,
                     gint *pupil_y,
                     GtkWidget *widget)
 {
-	double sina;
-	double cosa;
-	double h;
-	double temp;
 	double nx, ny;
+	double distance;
+	double angle, angle_z;
+	double radius_x, radius_y;
 
 	gfloat xalign, yalign;
 	gint width, height;
@@ -81,32 +80,34 @@ calculate_pupil_xy (EyesPlugin *eyes_applet,
 	height = GTK_WIDGET(widget)->allocation.height;
 	gtk_misc_get_alignment(GTK_MISC(widget), &xalign, &yalign);
 
+    /* calculate x,y pointer offsets wrt to eye center */
 	nx = x - MAX(width - eyes_applet->eye_width, 0) * xalign
 		- eyes_applet->eye_width / 2 - GTK_WIDGET(widget)->allocation.x;
 	ny = y - MAX(height - eyes_applet->eye_height, 0) * yalign
 		- eyes_applet->eye_height / 2 - GTK_WIDGET(widget)->allocation.y;
 
-	h = hypot (nx, ny);
-	if (h < 0.5 ||
-		abs (h) < (abs (hypot (eyes_applet->eye_height / 2,
-							   eyes_applet->eye_width / 2))
-				   - eyes_applet->wall_thickness
-				   - eyes_applet->pupil_height))
-	{
-		*pupil_x = nx + eyes_applet->eye_width / 2;
-		*pupil_y = ny + eyes_applet->eye_height / 2;
-		return;
-	}
+	/* calculate eye sizes */
+	radius_x = (eyes_applet->eye_width -
+				eyes_applet->wall_thickness -
+				eyes_applet->pupil_width) / 2.0;
+	radius_y = (eyes_applet->eye_height -
+				eyes_applet->wall_thickness -
+				eyes_applet->pupil_height) / 2.0;
 
-	sina = nx / h;
-	cosa = ny / h;
+	/* by default assume the z-axis distance of 3 radius_x */
+	distance = 3 * radius_x;
 
-	temp = hypot ((eyes_applet->eye_width / 2) * sina, (eyes_applet->eye_height / 2) * cosa);
-	temp -= hypot ((eyes_applet->pupil_width / 2) * sina, (eyes_applet->pupil_height / 2) * cosa);
-	temp -= hypot ((eyes_applet->wall_thickness / 2) * sina, (eyes_applet->wall_thickness / 2) * cosa);
+	/* correction factor for aspect ratio of the eye */
+	if (radius_y != 0)
+		ny *= radius_x / radius_y;
 
-	*pupil_x = temp * sina + (eyes_applet->eye_width / 2);
-	*pupil_y = temp * cosa + (eyes_applet->eye_height / 2);
+	/* calculate 3D rotation angles */
+	angle_z = atan2 (ny, nx);
+	angle = atan2 (hypot (nx, ny), distance);
+
+	/* perform 3D rotation of a vector [0,0,1] (z=1) */
+	*pupil_x = radius_x * sin (angle) * cos (angle_z) + eyes_applet->eye_width / 2;
+	*pupil_y = radius_y * sin (angle) * sin (angle_z) + eyes_applet->eye_height / 2;
 }
 
 
