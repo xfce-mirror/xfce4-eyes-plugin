@@ -68,6 +68,8 @@ GNU automake installed!):
 
 1a) ./autogen.sh --prefix=/usr
 
+If an error about a missing ltmain.sh occurs, try "autoreconf -i".
+
 Otherwise, if you've downloaded the tarball from e.g.
 http://archive.xfce.org/, issue the following command:
 
