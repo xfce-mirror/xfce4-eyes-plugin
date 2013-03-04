@@ -1,7 +1,8 @@
 # Swedish messages for xfce4-eyes.
-# Copyright (C) 2003, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2008, 2013 Free Software Foundation, Inc.
 # Johan Hammar <Johan Hammar@swipnet.se>, 2003.
 # Daniel Nylander <po@danielnylander.se>, 2008.
+# Andreas Rönnquist <gusnan@gusnan.se>, 2013
 #
 msgid ""
 msgstr ""
@@ -9,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-01 17:32+0100\n"
 "PO-Revision-Date: 2008-12-13 13:50+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Last-Translator: Andreas Rönnquist <gusnan@gusnan.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +28,7 @@ msgstr "_Välj ett tema:"
 
 #: ../panel-plugin/eyes.c:377
 msgid "Use single _row in multi-row panel"
-msgstr ""
+msgstr "Använd enkel _rad i panel med flera rader"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
