@@ -3,7 +3,7 @@
 - Small optimizations to update function, making animation more smooth.
 - Support for deskbar mode and panel multi-row config (>=xfce4-panel-4.9.0).
 - Make eye movement independent, like in xeyes (bug #9036).
-- Implement eye position calculations in 3D coordinatines (bug #9036).
+- Implement eye position calculations in 3D coordinates (bug #9036).
 - Build the plugin as a module.
 - Autotools update (automake-1.13 compatibility and other issues).
 - Fix remembering theme (bug #9035).
