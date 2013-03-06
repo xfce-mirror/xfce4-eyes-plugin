@@ -27,7 +27,7 @@ msgstr "_Изаберите тему:"
 
 #: ../panel-plugin/eyes.c:377
 msgid "Use single _row in multi-row panel"
-msgstr "Користи један ред у вишередној плочи"
+msgstr "Користи један _ред у вишередној полици"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
