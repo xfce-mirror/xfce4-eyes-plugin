@@ -1,34 +1,36 @@
-# translation of Xfce4 toys to Finnish
-# This file is distributed under the same license as the xfce4-eyes package.
-# Copyright (C) YEAR THE xfce4-eyes'S COPYRIGHT HOLDER.
-#
-# Juha Kautto <kautto.juha@kolumbus.fi>, 2004.
-# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2007.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2007
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2013
+# Juha Kautto <kautto.juha@kolumbus.fi>, 2004
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-eyes 4.3.0\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-01 17:32+0100\n"
-"PO-Revision-Date: 2007-01-20 13:55+0200\n"
-"Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
-"Language-Team: \n"
-"Language: \n"
+"POT-Creation-Date: 2013-07-03 20:59+0200\n"
+"PO-Revision-Date: 2013-11-11 20:40+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/xfce/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/eyes.c:324 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:332 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
 msgstr "Silmät"
 
-#: ../panel-plugin/eyes.c:340
+#: ../panel-plugin/eyes.c:348
 msgid "_Select a theme:"
 msgstr "_Valitse teema:"
 
-#: ../panel-plugin/eyes.c:377
+#: ../panel-plugin/eyes.c:385
 msgid "Use single _row in multi-row panel"
-msgstr ""
+msgstr "Käytä _yhtä riviä useamman rivin paneelissa"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
