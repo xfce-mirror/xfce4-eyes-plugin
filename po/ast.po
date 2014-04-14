@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:59+0200\n"
-"PO-Revision-Date: 2014-02-24 10:04+0000\n"
+"PO-Revision-Date: 2014-04-13 23:15+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "_Esbillar un tema:"
 
 #: ../panel-plugin/eyes.c:385
 msgid "Use single _row in multi-row panel"
-msgstr "Usa una _fila sola nel panel de delles files"
+msgstr "Usa una _filera sola nel panel de fileres múltiples"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
