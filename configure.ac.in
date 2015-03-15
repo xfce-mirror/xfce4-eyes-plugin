@@ -6,15 +6,15 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([eyes_version_major], [4])
 m4_define([eyes_version_minor], [4])
-m4_define([eyes_version_micro], [3])
+m4_define([eyes_version_micro], [4])
 m4_define([eyes_version_build], [r@REVISION@])
-m4_define([eyes_version_tag], [git])
+m4_define([eyes_version_tag], [])
 m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_version_micro()ifelse(eyes_version_tag(), [git], [eyes_version_tag()-eyes_version_build()], [eyes_version_tag()])])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2006-2013 The Xfce development team])
+AC_COPYRIGHT([Copyright (c) 2006-2015 The Xfce development team])
 AC_INIT([xfce4-eyes-plugin], [eyes_version], [http://bugzilla.xfce.org/], [xfce4-eyes-plugin])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIR([m4])

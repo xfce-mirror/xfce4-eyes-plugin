@@ -1,3 +1,10 @@
+4.4.4 (2015-03-15)
+------------------
+- Add ACLOCAL_AMFLAGS to Makefile.am
+- Add .gitignore
+- Fix IT_PROG_INTLTOOL warning.
+- Translation updates: Hebrew, Lithuania, Slovak
+
 4.4.3 (2014-12-23)
 ------------------
 - Many translation updates.
