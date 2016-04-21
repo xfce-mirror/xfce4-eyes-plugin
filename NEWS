@@ -1,3 +1,7 @@
+4.4.5 (2016-04-22)
+------------------
+- Translation updates: Amharic, Catalan, Esperanto, Greek, Swedish
+
 4.4.4 (2015-03-15)
 ------------------
 - Add ACLOCAL_AMFLAGS to Makefile.am
