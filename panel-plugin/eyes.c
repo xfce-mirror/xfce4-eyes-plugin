@@ -73,18 +73,29 @@ calculate_pupil_xy (EyesPlugin *eyes_applet,
 	double angle, angle_z;
 	double radius_x, radius_y;
 
-	gfloat xalign, yalign;
+	GtkAllocation allocation;
+	GtkAlign halign, valign;
+	gfloat xalign = 0, yalign = 0;
 	gint width, height;
 
-	width = GTK_WIDGET(widget)->allocation.width;
-	height = GTK_WIDGET(widget)->allocation.height;
-	gtk_misc_get_alignment(GTK_MISC(widget), &xalign, &yalign);
+	gtk_widget_get_allocation (GTK_WIDGET(widget), &allocation);
+
+	width = allocation.width;
+	height = allocation.height;
+	halign = gtk_widget_get_halign (GTK_WIDGET(widget));
+	valign = gtk_widget_get_valign (GTK_WIDGET(widget));
+
+	if (halign == GTK_ALIGN_CENTER) xalign = 0.5;
+	else if (halign == GTK_ALIGN_END) xalign = 1;
+
+	if (valign == GTK_ALIGN_CENTER) yalign = 0.5;
+	else if (valign == GTK_ALIGN_END) yalign = 1;
 
     /* calculate x,y pointer offsets wrt to eye center */
 	nx = x - MAX(width - eyes_applet->eye_width, 0) * xalign
-		- eyes_applet->eye_width / 2 - GTK_WIDGET(widget)->allocation.x;
+		- eyes_applet->eye_width / 2 - allocation.x;
 	ny = y - MAX(height - eyes_applet->eye_height, 0) * yalign
-		- eyes_applet->eye_height / 2 - GTK_WIDGET(widget)->allocation.y;
+		- eyes_applet->eye_height / 2 - allocation.y;
 
 	/* calculate eye sizes */
 	radius_x = (eyes_applet->eye_width -
@@ -231,11 +242,20 @@ setup_eyes(EyesPlugin *eyes)
                            FALSE, FALSE, 0);
 
 		if ((eyes->num_eyes != 1) && (i == 0))
-            gtk_misc_set_alignment (GTK_MISC (eyes->eyes[i]), 1.0, 0.5);
+		{
+			gtk_widget_set_halign (GTK_WIDGET (eyes->eyes[i]), GTK_ALIGN_END);
+			gtk_widget_set_valign (GTK_WIDGET (eyes->eyes[i]), GTK_ALIGN_CENTER);
+		}
 		else if ((eyes->num_eyes != 1) && (i == eyes->num_eyes - 1))
-			gtk_misc_set_alignment (GTK_MISC (eyes->eyes[i]), 0.0, 0.5);
+		{
+			gtk_widget_set_halign (GTK_WIDGET (eyes->eyes[i]), GTK_ALIGN_START);
+			gtk_widget_set_valign (GTK_WIDGET (eyes->eyes[i]), GTK_ALIGN_CENTER);
+		}
 		else
-			gtk_misc_set_alignment (GTK_MISC (eyes->eyes[i]), 0.5, 0.5);
+		{
+			gtk_widget_set_halign (GTK_WIDGET (eyes->eyes[i]), GTK_ALIGN_CENTER);
+			gtk_widget_set_valign (GTK_WIDGET (eyes->eyes[i]), GTK_ALIGN_CENTER);
+		}
 
 		eyes->pointer_last_x[i] = G_MAXINT;
 		eyes->pointer_last_y[i] = G_MAXINT;
@@ -453,9 +473,19 @@ eyes_mode_changed (XfcePanelPlugin     *plugin,
 {
     if (mode == XFCE_PANEL_PLUGIN_MODE_VERTICAL ||
         mode == XFCE_PANEL_PLUGIN_MODE_DESKBAR)
-        gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 0.0, 1.0);
+    {
+        gtk_widget_set_halign(GTK_WIDGET(eyes->align), GTK_ALIGN_CENTER);
+        gtk_widget_set_valign(GTK_WIDGET(eyes->align), GTK_ALIGN_CENTER);
+        gtk_widget_set_hexpand(GTK_WIDGET(eyes->align), FALSE);
+        gtk_widget_set_vexpand(GTK_WIDGET(eyes->align), TRUE);
+    }
     else
-        gtk_alignment_set (GTK_ALIGNMENT (eyes->align), 0.5, 0.5, 1.0, 0.0);
+    {
+        gtk_widget_set_halign(GTK_WIDGET(eyes->align), GTK_ALIGN_CENTER);
+        gtk_widget_set_valign(GTK_WIDGET(eyes->align), GTK_ALIGN_CENTER);
+        gtk_widget_set_hexpand(GTK_WIDGET(eyes->align), TRUE);
+        gtk_widget_set_vexpand(GTK_WIDGET(eyes->align), FALSE);
+    }
 
     eyes_set_size (plugin, xfce_panel_plugin_get_size (plugin), eyes);
 
@@ -532,9 +562,7 @@ eyes_write_rc_file (XfcePanelPlugin *plugin,
 static EyesPlugin *
 eyes_plugin_new (XfcePanelPlugin* plugin)
 {
-    EyesPlugin *eyes;
-
-    eyes = g_new0(EyesPlugin, 1);
+    EyesPlugin *eyes = g_new0(EyesPlugin, 1);
 
     eyes->plugin = plugin;
 
@@ -542,7 +570,12 @@ eyes_plugin_new (XfcePanelPlugin* plugin)
     gtk_event_box_set_visible_window (GTK_EVENT_BOX (eyes->ebox), FALSE);
     gtk_widget_show(eyes->ebox);
 
-    eyes->align = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
+    eyes->align = gtk_box_new (GTK_ORIENTATION_VERTICAL, 1);
+    gtk_widget_set_halign(GTK_WIDGET(eyes->align), GTK_ALIGN_CENTER);
+    gtk_widget_set_valign(GTK_WIDGET(eyes->align), GTK_ALIGN_CENTER);
+    gtk_widget_set_hexpand(GTK_WIDGET(eyes->align), TRUE);
+    gtk_widget_set_vexpand(GTK_WIDGET(eyes->align), TRUE);
+
     gtk_container_add(GTK_CONTAINER(eyes->ebox), eyes->align);
     gtk_widget_show(eyes->align);
 
