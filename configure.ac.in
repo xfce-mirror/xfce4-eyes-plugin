@@ -14,7 +14,7 @@ m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_versio
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2006-2015 The Xfce development team])
+AC_COPYRIGHT([Copyright (c) 2006-2016 The Xfce development team])
 AC_INIT([xfce4-eyes-plugin], [eyes_version], [http://bugzilla.xfce.org/], [xfce4-eyes-plugin])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIR([m4])
