@@ -164,12 +164,18 @@ timer_cb(EyesPlugin *eyes)
     gint x, y;
     gint pupil_x, pupil_y;
     gint i;
+    GdkWindow *window;
+    GdkDevice *mouse_device;
+
+    GdkDeviceManager *devman = gdk_display_get_device_manager (gdk_display_get_default());
+    mouse_device = gdk_device_manager_get_client_pointer (devman);
 
     for (i = 0; i < eyes->num_eyes; i++)
     {
         if (gtk_widget_get_realized (eyes->eyes[i]))
         {
-            gdk_window_get_pointer(eyes->eyes[i]->window, &x, &y, NULL);
+            window = gtk_widget_get_window (GTK_WIDGET (eyes->eyes[i]));
+            gdk_window_get_device_position (window, mouse_device, &x, &y, NULL);
 
             if ((x != eyes->pointer_last_x[i]) || (y != eyes->pointer_last_y[i]))
             {
