@@ -351,7 +351,7 @@ static void
 eyes_properties_dialog (XfcePanelPlugin *plugin,
                         EyesPlugin      *eyes)
 {
-	GtkWidget   *dlg, *hbox, *label, *combobox, *check;
+	GtkWidget   *dlg, *hbox, *label, *combobox, *check, *area;
 	GDir        *dir;
 	gint         i;
 	gchar       *current;
@@ -371,8 +371,9 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
     g_signal_connect (dlg, "response", G_CALLBACK (eyes_properties_dialog_response),
                       eyes);
 
+	area = gtk_dialog_get_content_area (GTK_DIALOG (dlg));
 	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), hbox, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (area), hbox, FALSE, FALSE, 0);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
 
 	label = gtk_label_new_with_mnemonic (_("_Select a theme:"));
@@ -413,7 +414,7 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
     check = gtk_check_button_new_with_mnemonic
         (_("Use single _row in multi-row panel"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), eyes->single_row);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), check, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (area), check, FALSE, FALSE, 0);
     g_signal_connect(check, "toggled", G_CALLBACK(check_single_row_toggled), eyes);
 
     gtk_widget_show_all (dlg);
