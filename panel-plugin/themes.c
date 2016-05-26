@@ -35,11 +35,13 @@ gchar *theme_directories[] = {
 #define NUM_THEME_DIRECTORIES 1
 
 static void
-parse_theme_file (EyesPlugin *eyes, FILE *theme_file)
+parse_theme_file (EyesPlugin *eyes,
+                  FILE       *theme_file)
 {
     gchar line_buf [512]; /* prolly overkill */
     gchar *token;
     fgets (line_buf, 512, theme_file);
+
     while (!feof (theme_file)) {
         token = strtok (line_buf, "=");
         if (strncmp (token, "wall-thickness",
@@ -68,20 +70,20 @@ parse_theme_file (EyesPlugin *eyes, FILE *theme_file)
             if (eyes->eye_filename != NULL)
                 g_free (eyes->eye_filename);
             eyes->eye_filename = g_strdup_printf ("%s%s",
-                                    eyes->theme_dir,
-                                    token);
+                                                  eyes->theme_dir,
+                                                  token);
         }
         else if (strncmp (token, "pupil-pixmap", strlen ("pupil-pixmap")) == 0)
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
-			if (eyes->pupil_filename != NULL)
-				g_free (eyes->pupil_filename);
-			eyes->pupil_filename
-				= g_strdup_printf ("%s%s",
-						   eyes->theme_dir,
-						   token);
+            if (eyes->pupil_filename != NULL)
+                g_free (eyes->pupil_filename);
+            eyes->pupil_filename = g_strdup_printf ("%s%s",
+                                                    eyes->theme_dir,
+                                                    token);
         }
+
         fgets (line_buf, 512, theme_file);
     }
 }
@@ -92,12 +94,12 @@ void
 load_theme (EyesPlugin  *eyes,
             const gchar *theme_dir)
 {
-	FILE* theme_file;
+    FILE* theme_file;
     gchar *file_name;
 
     eyes->theme_dir = g_strdup_printf ("%s/", theme_dir);
 
-    file_name = g_strdup_printf("%s%s",theme_dir,"/config");
+    file_name = g_strdup_printf ("%s%s",theme_dir,"/config");
     theme_file = fopen (file_name, "r");
     if (theme_file == NULL) {
         g_error ("Unable to open theme file.");
@@ -109,20 +111,19 @@ load_theme (EyesPlugin  *eyes,
     eyes->theme_name = g_strdup (theme_dir);
 
     if (eyes->eye_image)
-    	g_object_unref (eyes->eye_image);
+        g_object_unref (eyes->eye_image);
 
     eyes->eye_image = gdk_pixbuf_new_from_file (eyes->eye_filename, NULL);
 
     if (eyes->pupil_image)
-    	g_object_unref (eyes->pupil_image);
+        g_object_unref (eyes->pupil_image);
 
     eyes->pupil_image = gdk_pixbuf_new_from_file (eyes->pupil_filename, NULL);
 
-	eyes->eye_height = gdk_pixbuf_get_height (eyes->eye_image);
+    eyes->eye_height = gdk_pixbuf_get_height (eyes->eye_image);
     eyes->eye_width = gdk_pixbuf_get_width (eyes->eye_image);
     eyes->pupil_height = gdk_pixbuf_get_height (eyes->pupil_image);
     eyes->pupil_width = gdk_pixbuf_get_width (eyes->pupil_image);
 
     g_free (file_name);
-
 }

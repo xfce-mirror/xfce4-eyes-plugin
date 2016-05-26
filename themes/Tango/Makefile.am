@@ -5,7 +5,6 @@ Tango_DATA =								\
 	tango-pupil.png							\
 	config
 
-EXTRA_DIST =								\
-	$(Tango_DATA)
+EXTRA_DIST = $(Tango_DATA)
 
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

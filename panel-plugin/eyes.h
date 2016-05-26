@@ -24,35 +24,35 @@
 
 typedef struct
 {
-	XfcePanelPlugin *plugin;
+    XfcePanelPlugin    *plugin;
 
-	GtkWidget	*ebox;
+    GtkWidget          *ebox;
 
-	/* Properties */
-	gchar *active_theme;
+    /* Properties */
+    gchar              *active_theme;
 
-	/* Plugin */
-	GtkWidget   *align;
-	GtkWidget   *hbox;
-	GtkWidget   **eyes;
-	gboolean     single_row;
-	guint        timeout_id;
-	gint 	    *pointer_last_x;
-	gint 	    *pointer_last_y;
+    /* Plugin */
+    GtkWidget          *align;
+    GtkWidget          *hbox;
+    GtkWidget         **eyes;
+    gboolean            single_row;
+    guint               timeout_id;
+    gint               *pointer_last_x;
+    gint               *pointer_last_y;
 
-	/* Theme */
-	GdkPixbuf *eye_image;
-	GdkPixbuf *pupil_image;
-	gchar *theme_dir;
-	gchar *theme_name;
-	gchar *eye_filename;
-	gchar *pupil_filename;
-	gint num_eyes;
-	gint eye_height;
-	gint eye_width;
-	gint pupil_height;
-	gint pupil_width;
-	gint wall_thickness;
+    /* Theme */
+    GdkPixbuf          *eye_image;
+    GdkPixbuf          *pupil_image;
+    gchar              *theme_dir;
+    gchar              *theme_name;
+    gchar              *eye_filename;
+    gchar              *pupil_filename;
+    gint                num_eyes;
+    gint                eye_height;
+    gint                eye_width;
+    gint                pupil_height;
+    gint                pupil_width;
+    gint                wall_thickness;
 }
 EyesPlugin;
 

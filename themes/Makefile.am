@@ -2,7 +2,7 @@ SUBDIRS = 						\
 	Bizarre						\
 	Bloodshot					\
 	Default						\
-	Default-tiny					\
+	Default-tiny				\
 	Horrid						\
 	Tango
 
