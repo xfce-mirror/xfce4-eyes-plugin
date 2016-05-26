@@ -167,8 +167,13 @@ timer_cb(EyesPlugin *eyes)
     GdkWindow *window;
     GdkDevice *mouse_device;
 
+#if GTK_CHECK_VERSION(3,2,0)
+    GdkSeat *seat = gdk_display_get_default_seat (gdk_display_get_default());
+    mouse_device = gdk_seat_get_pointer (seat);
+#else
     GdkDeviceManager *devman = gdk_display_get_device_manager (gdk_display_get_default());
     mouse_device = gdk_device_manager_get_client_pointer (devman);
+#endif
 
     for (i = 0; i < eyes->num_eyes; i++)
     {
