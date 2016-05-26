@@ -167,7 +167,7 @@ timer_cb(EyesPlugin *eyes)
 
     for (i = 0; i < eyes->num_eyes; i++)
     {
-        if (GTK_WIDGET_REALIZED(eyes->eyes[i]))
+        if (gtk_widget_get_realized (eyes->eyes[i]))
         {
             gdk_window_get_pointer(eyes->eyes[i]->window, &x, &y, NULL);
 
@@ -278,7 +278,7 @@ eyes_applet_fill(EyesPlugin *eyes)
     if (eyes->timeout_id == 0)
     {
         eyes->timeout_id = g_timeout_add (UPDATE_TIMEOUT,
-                                          (GtkFunction)timer_cb, eyes);
+                                          (GSourceFunc)timer_cb, eyes);
     }
 
     return TRUE;
