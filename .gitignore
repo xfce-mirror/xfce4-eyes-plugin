@@ -24,7 +24,8 @@ modules.builtin
 *.gcno
 *.gmo
 
-.deps
+.deps/
+.libs/
 aclocal*
 autom4te.cache
 depcomp
@@ -45,6 +46,7 @@ panel-plugin/eyes.desktop
 panel-plugin/xfce4-eyes-plugin
 po/POTFILES
 po/stamp-it
+po/.intltool-merge-cache
 readme.txt
 stamp-*
 INSTALL
