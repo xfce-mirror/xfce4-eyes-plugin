@@ -6,3 +6,4 @@ _Comment=Eyes that spy on you
 Icon=xfce4-eyes
 X-XFCE-Internal=FALSE
 X-XFCE-Module=eyes
+X-XFCE-API=2.0
