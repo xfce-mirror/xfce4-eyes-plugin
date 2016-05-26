@@ -210,7 +210,7 @@ setup_eyes(EyesPlugin *eyes)
         eyes->hbox = NULL;
     }
 
-    eyes->hbox = gtk_hbox_new(FALSE, 0);
+    eyes->hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_container_add(GTK_CONTAINER(eyes->align), GTK_WIDGET(eyes->hbox));
 
     eyes->eyes = g_new0 (GtkWidget *, eyes->num_eyes);
@@ -340,7 +340,7 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
     g_signal_connect (dlg, "response", G_CALLBACK (eyes_properties_dialog_response),
                       eyes);
 
-	hbox = gtk_hbox_new(FALSE, 6);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), hbox, FALSE, FALSE, 0);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
 
