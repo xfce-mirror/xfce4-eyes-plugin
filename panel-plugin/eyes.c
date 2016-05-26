@@ -307,7 +307,7 @@ static void
 combobox_changed (GtkComboBox    *combobox,
                   EyesPlugin     *eyes)
 {
-	gchar *selected = gtk_combo_box_get_active_text (combobox);
+	gchar *selected = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (combobox));
 
 	if (eyes->active_theme)
 		g_free (eyes->active_theme);
@@ -367,7 +367,7 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
 	label = gtk_label_new_with_mnemonic (_("_Select a theme:"));
 	gtk_box_pack_start (GTK_BOX(hbox), label, FALSE, FALSE, 0);
 
-	combobox = gtk_combo_box_new_text ();
+	combobox = gtk_combo_box_text_new ();
     gtk_box_pack_start (GTK_BOX (hbox), combobox, FALSE, TRUE, 0);
 
     if (eyes->active_theme)
@@ -377,13 +377,13 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
 
     if ((dir = g_dir_open(THEMESDIR, 0, NULL)) == NULL)
     {
-        gtk_combo_box_append_text (GTK_COMBO_BOX (combobox), current);
+        gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox), current);
     }
     else
     {
         for (i = 0; (entry = g_dir_read_name(dir)) != NULL; i++)
         {
-            gtk_combo_box_append_text (GTK_COMBO_BOX (combobox), entry);
+            gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combobox), entry);
 
             if (strcmp (entry, current) == 0)
 				gtk_combo_box_set_active (GTK_COMBO_BOX(combobox), i);
