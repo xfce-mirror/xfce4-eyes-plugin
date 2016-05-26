@@ -1,9 +1,10 @@
-/* Copyright (c) Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>>
+/* Copyright (c) Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>
  * Copyright (c) Danny Milosavljevic <danny_milo@gmx.net>
- * Copyright (c) Dave Camp
- * Copyright (c) Davyd Madeley  <davyd@madeley.id.au>
+ * Copyright (c) Dave Camp <dave@davec.dhs.org>
+ * Copyright (c) Davyd Madeley <davyd@madeley.id.au>
  * Copyright (c) Nick Schermer <nick@xfce.org>
  * Copyright (c) Harald Judt <h.judt@gmx.at>
+ * Copyright (c) 2016 Andre Miranda <andre42m@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
