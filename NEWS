@@ -1,3 +1,8 @@
+4.4.99 (2016-06-08)
+------------------
+- Port to gtk+3/libxfce4ui-2/libxfce4panel-2.0
+- Translation updates: Catalan
+
 4.4.5 (2016-04-22)
 ------------------
 - Translation updates: Amharic, Catalan, Esperanto, Greek, Swedish
