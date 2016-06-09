@@ -170,7 +170,7 @@ timer_cb (EyesPlugin *eyes)
     GdkWindow *window;
     GdkDevice *mouse_device;
 
-#if GTK_CHECK_VERSION (3,2,0)
+#if GTK_CHECK_VERSION (3,20,0)
     GdkSeat *seat = gdk_display_get_default_seat (gdk_display_get_default ());
     mouse_device = gdk_seat_get_pointer (seat);
 #else
