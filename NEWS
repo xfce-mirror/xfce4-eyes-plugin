@@ -1,3 +1,8 @@
+4.5.0 (2016-06-10)
+------------------
+- Fix GTK_CHECK_VERSION for GdkSeat (bug #12633)
+- Translation updates: Catalan
+
 4.4.99 (2016-06-08)
 ------------------
 - Port to gtk+3/libxfce4ui-2/libxfce4panel-2.0
