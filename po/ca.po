@@ -5,13 +5,14 @@
 # Translators:
 # Carles Muñoz Gorriz <carlesmu@internuatas.org>, 2003,2006
 # Davidmp <medipas@gmail.com>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:59+0200\n"
-"PO-Revision-Date: 2017-07-25 11:27+0000\n"
+"PO-Revision-Date: 2017-08-20 17:08+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +31,7 @@ msgstr "_Seleccioneu un tema:"
 
 #: ../panel-plugin/eyes.c:385
 msgid "Use single _row in multi-row panel"
-msgstr "Utilitza una única _fila en un plafó amb múltiples files"
+msgstr "Utilitza una _fila en un plafó amb múltiples files"
 
 #: ../panel-plugin/eyes.desktop.in.h:2
 msgid "Eyes that spy on you"
