@@ -378,15 +378,18 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
                       eyes);
 
     area = gtk_dialog_get_content_area (GTK_DIALOG (dlg));
-    hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+    gtk_container_set_border_width (GTK_CONTAINER (area), 12);
+    gtk_box_set_spacing (GTK_BOX (area), 6);
+
+    hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
     gtk_box_pack_start (GTK_BOX (area), hbox, FALSE, FALSE, 0);
-    gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
 
     label = gtk_label_new_with_mnemonic (_("_Select a theme:"));
+    gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
     gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
 
     combobox = gtk_combo_box_text_new ();
-    gtk_box_pack_start (GTK_BOX (hbox), combobox, FALSE, TRUE, 0);
+    gtk_box_pack_start (GTK_BOX (hbox), combobox, TRUE, TRUE, 0);
 
     if (eyes->active_theme)
         current = g_strdup (eyes->active_theme);
@@ -420,6 +423,7 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
     check = gtk_check_button_new_with_mnemonic (_("Use single _row in multi-row panel"));
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check), eyes->single_row);
     gtk_box_pack_start (GTK_BOX (area), check, FALSE, FALSE, 0);
+    gtk_widget_set_margin_bottom (GTK_WIDGET (check), 12);
     g_signal_connect (check, "toggled", G_CALLBACK (check_single_row_toggled), eyes);
 
     gtk_widget_show_all (dlg);
