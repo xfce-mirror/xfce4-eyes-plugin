@@ -20,7 +20,7 @@
 #define __EYES_H__
 
 #include <gtk/gtk.h>
-#include <libxfce4panel/xfce-panel-plugin.h>
+#include <libxfce4panel/libxfce4panel.h>
 
 typedef struct
 {
