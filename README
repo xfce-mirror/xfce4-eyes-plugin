@@ -1,7 +1,7 @@
 XFCE4-EYES-PLUGIN
 ==========================================================================
 You can always find up-to-date information at the plugin homepage:
-http://goodies.xfce.org/projects/panel-plugins/xfce4-eyes-plugin
+https://docs.xfce.org/panel-plugins/xfce4-eyes-plugin
 
 
 CONTENTS
@@ -111,10 +111,7 @@ IRC). Please do not report such problems on the bug tracker.
 TRANSLATING THE PLUGIN FOR YOUR LANGUAGE
 ==========================================================================
 If you need help getting started with translating the plugin into your
-language, please visit https://translations.xfce.org/ and absorb the
-information that is there, especially on the *Help* page! There is
-other useful documentation available on this topic, try this wiki page
-for a start:
+language, please visit this wiki page for a start:
 https://wiki.xfce.org/translations/translation_guidance_in_xfce
 
 TRANSLATORS, PLEASE MAKE SURE YOU CHECK YOUR FILE FOR ERRORS BEFORE
