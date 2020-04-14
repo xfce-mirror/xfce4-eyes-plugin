@@ -5,8 +5,8 @@
 # Translators:
 # malditoastur <malditoastur@gmail.com>, 2004
 # enolp <enolp@softastur.org>, 2020
-# Ḷḷumex03 <tornes@opmbx.org>, 2014
-# Ḷḷumex03 <tornes@opmbx.org>, 2014
+# Ḷḷumex03, 2014
+# Ḷḷumex03, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
