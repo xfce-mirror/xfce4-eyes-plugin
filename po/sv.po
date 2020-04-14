@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:59+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2019-08-02 06:32+0200\n"
+"PO-Revision-Date: 2019-08-02 04:32+0000\n"
 "Last-Translator: Påvel Nicklasson <pavel2@frimix.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/xfce/xfce-panel-plugins/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -20,15 +20,19 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/eyes.c:332 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
 msgstr "Ögon"
 
-#: ../panel-plugin/eyes.c:348
+#: ../panel-plugin/eyes.c:370
+msgid "_Close"
+msgstr "_Stäng"
+
+#: ../panel-plugin/eyes.c:387
 msgid "_Select a theme:"
 msgstr "_Välj ett tema:"
 
-#: ../panel-plugin/eyes.c:385
+#: ../panel-plugin/eyes.c:423
 msgid "Use single _row in multi-row panel"
 msgstr "Använd en enda _rad i panel med flera rader"
 
