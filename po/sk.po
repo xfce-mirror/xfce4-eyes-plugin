@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:59+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2019-08-02 06:32+0200\n"
+"PO-Revision-Date: 2019-08-02 04:32+0000\n"
 "Last-Translator: Slavko <linux@slavino.sk>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/xfce-panel-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -20,15 +20,19 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../panel-plugin/eyes.c:332 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
 msgstr "Oči"
 
-#: ../panel-plugin/eyes.c:348
+#: ../panel-plugin/eyes.c:370
+msgid "_Close"
+msgstr "_Zatvoriť"
+
+#: ../panel-plugin/eyes.c:387
 msgid "_Select a theme:"
 msgstr "_Vyberte motív:"
 
-#: ../panel-plugin/eyes.c:385
+#: ../panel-plugin/eyes.c:423
 msgid "Use single _row in multi-row panel"
 msgstr "Použiť jeden _riadok vo viacriadkovom paneli"
 
