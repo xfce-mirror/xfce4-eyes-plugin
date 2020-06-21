@@ -1,3 +1,22 @@
+4.5.1
+======
+- Update URLs. Remove ref. to translations.x.o (Bug #16162)
+- Allow compilation with panel 4.15
+- Replace GtkStock buttons
+- Improve spacing (Bug #14664)
+- Make build less verbose
+- AC_CONFIG_MACRO_DIR -> AC_CONFIG_MACRO_DIRS
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Asturian, Basque,
+  Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, English (Australia), English (United
+  Kingdom), Esperanto, Estonian, Finnish, French, Galician, German,
+  Greek, Hebrew, Hungarian, Icelandic, Indonesian, Italian, Japanese,
+  Kazakh, Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål, Occitan
+  (post 1500), Polish, Portuguese, Portuguese (Brazil), Romanian,
+  Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish,
+  Uighur, Ukrainian, Urdu, Urdu (Pakistan)
+
 4.5.0 (2016-06-10)
 ------------------
 - Fix GTK_CHECK_VERSION for GdkSeat (bug #12633)
