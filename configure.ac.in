@@ -14,8 +14,8 @@ m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_versio
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2006-2016 The Xfce development team])
-AC_INIT([xfce4-eyes-plugin], [eyes_version], [http://bugzilla.xfce.org/], [xfce4-eyes-plugin])
+AC_COPYRIGHT([Copyright (c) 2006-2020 The Xfce development team])
+AC_INIT([xfce4-eyes-plugin], [eyes_version], [https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/], [xfce4-eyes-plugin])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET()
@@ -23,7 +23,7 @@ AC_CANONICAL_TARGET()
 dnl ***************************
 dnl *** Initialize automake ***
 dnl ***************************
-AM_INIT_AUTOMAKE([1.9 dist-bzip2 tar-ustar no-dist-gzip])
+AM_INIT_AUTOMAKE([1.9 dist-bzip2 tar-ustar no-dist-gzip foreign])
 AC_CONFIG_HEADERS([config.h])
 AM_MAINTAINER_MODE()
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
