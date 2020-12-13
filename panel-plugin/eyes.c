@@ -285,7 +285,7 @@ setup_eyes (EyesPlugin *eyes)
 
 
 
-static gboolean
+static void
 eyes_applet_fill (EyesPlugin *eyes)
 {
     gtk_widget_show_all (GTK_WIDGET (eyes->align));
@@ -294,8 +294,6 @@ eyes_applet_fill (EyesPlugin *eyes)
     {
         eyes->timeout_id = g_timeout_add (UPDATE_TIMEOUT, timer_cb, eyes);
     }
-
-    return TRUE;
 }
 
 
