@@ -161,9 +161,10 @@ draw_eye (EyesPlugin *eyes,
 
 
 
-static gint
-timer_cb (EyesPlugin *eyes)
+static gboolean
+timer_cb (gpointer user_data)
 {
+    EyesPlugin *eyes = user_data;
     gint x, y;
     gint pupil_x, pupil_y;
     gint i;
@@ -284,18 +285,15 @@ setup_eyes (EyesPlugin *eyes)
 
 
 
-static gboolean
+static void
 eyes_applet_fill (EyesPlugin *eyes)
 {
     gtk_widget_show_all (GTK_WIDGET (eyes->align));
 
     if (eyes->timeout_id == 0)
     {
-        eyes->timeout_id = g_timeout_add (UPDATE_TIMEOUT,
-                                         (GSourceFunc) timer_cb, eyes);
+        eyes->timeout_id = g_timeout_add (UPDATE_TIMEOUT, timer_cb, eyes);
     }
-
-    return TRUE;
 }
 
 
