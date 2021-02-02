@@ -46,7 +46,7 @@ panel-plugin/eyes.desktop
 panel-plugin/xfce4-eyes-plugin
 po/POTFILES
 po/stamp-it
-po/.intltool-merge-cache
+po/.intltool-merge-cache*
 readme.txt
 stamp-*
 INSTALL
