@@ -42,7 +42,6 @@ AM_PROG_CC_C_O()
 dnl **********************************
 dnl *** Check for standard headers ***
 dnl **********************************
-AC_HEADER_STDC()
 AC_CHECK_HEADERS([math.h])
 
 dnl ******************************
@@ -67,7 +66,7 @@ dnl *** Check for debugging support ***
 dnl ***********************************
 XDT_FEATURE_DEBUG()
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 po/Makefile.in
 panel-plugin/Makefile
@@ -86,3 +85,4 @@ themes/Default-tiny/Makefile
 themes/Horrid/Makefile
 themes/Tango/Makefile
 ])
+AC_OUTPUT
