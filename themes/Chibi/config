@@ -1,0 +1,4 @@
+wall-thickness = 4
+num-eyes = 2
+eye-pixmap = "chibi-eye.png"
+pupil-pixmap = "chibi-pupil.png"
