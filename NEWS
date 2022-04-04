@@ -1,3 +1,11 @@
+4.6.0 (2022-04-04)
+=====
+- Add Chibi theme (!4)
+- Small code improvements
+- Translation Updates:
+  Albanian, Armenian (Armenia), Basque, Belarusian, English (Canada),
+  Finnish, French, Hebrew, Slovenian, Spanish, Thai, Ukrainian, Uyghur
+
 4.5.1
 ======
 - Update URLs. Remove ref. to translations.x.o (Bug #16162)
