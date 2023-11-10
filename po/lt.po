@@ -5,33 +5,34 @@
 # Translators:
 # Mantas <zaz@xxx.lt>, 2003
 # Moo, 2015
+# Moo, 2023
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 06:32+0200\n"
-"PO-Revision-Date: 2019-08-02 04:32+0000\n"
-"Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
+"POT-Creation-Date: 2023-05-30 00:53+0200\n"
+"PO-Revision-Date: 2013-07-03 18:59+0000\n"
+"Last-Translator: Moo, 2023\n"
+"Language-Team: Lithuanian (http://app.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:365 ../panel-plugin/eyes.desktop.in.h:1
 msgid "Eyes"
 msgstr "Akys"
 
-#: ../panel-plugin/eyes.c:370
+#: ../panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "_Užverti"
 
-#: ../panel-plugin/eyes.c:387
+#: ../panel-plugin/eyes.c:385
 msgid "_Select a theme:"
-msgstr "_Pasirinkite temą:"
+msgstr "_Pasirinkite apipavidalinimą:"
 
-#: ../panel-plugin/eyes.c:423
+#: ../panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "Kelių eilučių skydelyje, naudoti vieną _eilutę"
 
