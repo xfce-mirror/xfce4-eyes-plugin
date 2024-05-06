@@ -4,21 +4,17 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([eyes_version_major], [4])
-m4_define([eyes_version_minor], [6])
-m4_define([eyes_version_micro], [0])
-m4_define([eyes_version_build], [r@REVISION@])
-m4_define([eyes_version_tag], [git])
-m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_version_micro()ifelse(eyes_version_tag(), [git], [eyes_version_tag()-eyes_version_build()], [eyes_version_tag()])])
+XDT_VERSION_INIT([4.6.0], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2020 The Xfce development team])
-AC_INIT([xfce4-eyes-plugin], [eyes_version], [https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/], [xfce4-eyes-plugin])
-AC_PREREQ([2.60])
+AC_INIT([xfce4-eyes-plugin], [xdt_version], [https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/], [xfce4-eyes-plugin])
+AC_PREREQ([2.69])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET()
+AC_REVISION([xdt_version_build])
 
 dnl ***************************
 dnl *** Initialize automake ***
@@ -36,7 +32,6 @@ LT_PATH_LD()
 AC_PROG_INSTALL()
 LT_PREREQ([2.2.6])
 LT_INIT([disable-static])
-IT_PROG_INTLTOOL([0.35.0])
 AM_PROG_CC_C_O()
 
 dnl **********************************
@@ -52,7 +47,11 @@ AC_CHECK_LIB([m], [sin])
 dnl ******************************
 dnl *** Check for i18n support ***
 dnl ******************************
-XDT_I18N([@LINGUAS@])
+GETTEXT_PACKAGE="$PACKAGE"
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Name of default gettext domain])
+AC_SUBST([GETTEXT_PACKAGE])
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
 
 dnl ***********************************
 dnl *** Check for required packages ***
@@ -65,7 +64,7 @@ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG()
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 AC_CONFIG_FILES([
 Makefile

@@ -1,8 +1,8 @@
 [Xfce Panel]
 Type=X-XFCE-PanelPlugin
 Encoding=UTF-8
-_Name=Eyes
-_Comment=Eyes that spy on you
+Name=Eyes
+Comment=Eyes that spy on you
 Icon=xfce4-eyes
 X-XFCE-Internal=FALSE
 X-XFCE-Module=eyes
