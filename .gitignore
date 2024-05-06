@@ -35,7 +35,6 @@ ChangeLog
 compile
 config.*
 configure
-configure.ac
 docs/*
 libtool
 ltmain.sh

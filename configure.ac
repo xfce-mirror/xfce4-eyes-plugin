@@ -4,21 +4,17 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([eyes_version_major], [4])
-m4_define([eyes_version_minor], [6])
-m4_define([eyes_version_micro], [0])
-m4_define([eyes_version_build], [r@REVISION@])
-m4_define([eyes_version_tag], [git])
-m4_define([eyes_version], [eyes_version_major().eyes_version_minor().eyes_version_micro()ifelse(eyes_version_tag(), [git], [eyes_version_tag()-eyes_version_build()], [eyes_version_tag()])])
+XDT_VERSION_INIT([4.6.0], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2020 The Xfce development team])
-AC_INIT([xfce4-eyes-plugin], [eyes_version], [https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/], [xfce4-eyes-plugin])
-AC_PREREQ([2.60])
+AC_INIT([xfce4-eyes-plugin], [xdt_version], [https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/], [xfce4-eyes-plugin])
+AC_PREREQ([2.69])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CANONICAL_TARGET()
+AC_REVISION([xdt_version_build])
 
 dnl ***************************
 dnl *** Initialize automake ***
@@ -68,7 +64,7 @@ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG()
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 AC_CONFIG_FILES([
 Makefile
