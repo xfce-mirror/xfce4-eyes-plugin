@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-eyes-plugin package.
 # 
 # Translators:
 # 8b03701f910565d01acaec9ce3f558ab_e9f0fee <b5b06e8f85fb8288fe43ad0bc2422d94_32848>, 2013
@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-07 12:59+0200\n"
 "PO-Revision-Date: 2013-07-03 18:59+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019,2021\n"
 "Language-Team: Slovenian (http://app.transifex.com/xfce/xfce-panel-plugins/language/sl/)\n"
@@ -19,18 +19,22 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: ../panel-plugin/eyes.c:365
+#: panel-plugin/eyes.c:365 panel-plugin/eyes.desktop.in:5
 msgid "Eyes"
 msgstr "Oči"
 
-#: ../panel-plugin/eyes.c:368
+#: panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "_Zapri"
 
-#: ../panel-plugin/eyes.c:385
+#: panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "_Izberite temo:"
 
-#: ../panel-plugin/eyes.c:421
+#: panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "Uporabi eno _vrstico na več-vrstičnem panoju"
+
+#: panel-plugin/eyes.desktop.in:6
+msgid "Eyes that spy on you"
+msgstr "Oči, ki vohunijo za vami"
