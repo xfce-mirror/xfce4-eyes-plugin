@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-eyes-plugin package.
 # 
 # Translators:
 # Theppitak Karoonboonyanan <theppitak@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-07 12:59+0200\n"
 "PO-Revision-Date: 2013-07-03 18:59+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>, 2017\n"
 "Language-Team: Thai (http://app.transifex.com/xfce/xfce-panel-plugins/language/th/)\n"
@@ -18,18 +18,22 @@ msgstr ""
 "Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/eyes.c:365
+#: panel-plugin/eyes.c:365 panel-plugin/eyes.desktop.in:5
 msgid "Eyes"
 msgstr "ลูกตา"
 
-#: ../panel-plugin/eyes.c:368
+#: panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "ปิ_ด"
 
-#: ../panel-plugin/eyes.c:385
+#: panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "เลือกชุด_ตกแต่ง:"
 
-#: ../panel-plugin/eyes.c:421
+#: panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "ใช้พื้นที่เพียงแ_ถวเดียวในพาเนลหลายแถว"
+
+#: panel-plugin/eyes.desktop.in:6
+msgid "Eyes that spy on you"
+msgstr "ลูกตาที่คอยเหลือบมองคุณ"
