@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-eyes-plugin package.
 # 
 # Translators:
 # Adriano Winter Bess <awbess@gmail.com>, 2006
@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-07 12:59+0200\n"
 "PO-Revision-Date: 2013-07-03 18:59+0000\n"
 "Last-Translator: Vladimir Melo <vladimirmelo@foresightlinux.org>, 2007\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/xfce/xfce-panel-plugins/language/pt_BR/)\n"
@@ -20,18 +20,22 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../panel-plugin/eyes.c:365
+#: panel-plugin/eyes.c:365 panel-plugin/eyes.desktop.in:5
 msgid "Eyes"
 msgstr "Olhos"
 
-#: ../panel-plugin/eyes.c:368
+#: panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "_Fechar"
 
-#: ../panel-plugin/eyes.c:385
+#: panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "_Selecionar um tema:"
 
-#: ../panel-plugin/eyes.c:421
+#: panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "Usar uma _linha no painel de multi-linhas"
+
+#: panel-plugin/eyes.desktop.in:6
+msgid "Eyes that spy on you"
+msgstr "Olhos que espionam você"
