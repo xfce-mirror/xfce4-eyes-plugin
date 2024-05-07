@@ -8,32 +8,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 06:32+0200\n"
-"PO-Revision-Date: 2019-08-02 04:32+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Amharic (http://www.transifex.com/xfce/xfce-panel-plugins/language/am/)\n"
+"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"PO-Revision-Date: 2013-07-03 18:59+0000\n"
+"Last-Translator: samson <sambelet@yahoo.com>, 2016\n"
+"Language-Team: Amharic (http://app.transifex.com/xfce/xfce-panel-plugins/language/am/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: am\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:365
 msgid "Eyes"
 msgstr "አይኖች"
 
-#: ../panel-plugin/eyes.c:370
+#: ../panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr ""
 
-#: ../panel-plugin/eyes.c:387
+#: ../panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "ገጽታ _ይምረጡ:"
 
-#: ../panel-plugin/eyes.c:423
+#: ../panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "ይጠቀሙ ነጠላ _ረድፍ ከ በርካታ-ረድፎች ክፍል ውስጥ"
-
-#: ../panel-plugin/eyes.desktop.in.h:2
-msgid "Eyes that spy on you"
-msgstr "በ እርስዎ ላይ የሚሰልሉ አይኖች"
