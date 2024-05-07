@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-eyes-plugin package.
 # 
 # Translators:
 # nab <nab@mail.by>, 2004
@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-07 12:59+0200\n"
 "PO-Revision-Date: 2013-07-03 18:59+0000\n"
 "Last-Translator: Źmicier Turok <nashtlumach@gmail.com>, 2018\n"
 "Language-Team: Belarusian (http://app.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
@@ -19,18 +19,22 @@ msgstr ""
 "Language: be\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../panel-plugin/eyes.c:365
+#: panel-plugin/eyes.c:365 panel-plugin/eyes.desktop.in:5
 msgid "Eyes"
 msgstr "Вочы"
 
-#: ../panel-plugin/eyes.c:368
+#: panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "_Закрыць"
 
-#: ../panel-plugin/eyes.c:385
+#: panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "_Абраць тэму:"
 
-#: ../panel-plugin/eyes.c:421
+#: panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "Выкарыстоўваць адзін _радок на шматрадковай панэлі"
+
+#: panel-plugin/eyes.desktop.in:6
+msgid "Eyes that spy on you"
+msgstr "Вочы, якія сочаць за вамі"
