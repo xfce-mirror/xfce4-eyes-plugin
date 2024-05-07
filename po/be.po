@@ -9,32 +9,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 06:32+0200\n"
-"PO-Revision-Date: 2019-08-02 04:32+0000\n"
-"Last-Translator: Źmicier Turok <nashtlumach@gmail.com>\n"
-"Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
+"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"PO-Revision-Date: 2013-07-03 18:59+0000\n"
+"Last-Translator: Źmicier Turok <nashtlumach@gmail.com>, 2018\n"
+"Language-Team: Belarusian (http://app.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: be\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:365
 msgid "Eyes"
 msgstr "Вочы"
 
-#: ../panel-plugin/eyes.c:370
+#: ../panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "_Закрыць"
 
-#: ../panel-plugin/eyes.c:387
+#: ../panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "_Абраць тэму:"
 
-#: ../panel-plugin/eyes.c:423
+#: ../panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "Выкарыстоўваць адзін _радок на шматрадковай панэлі"
-
-#: ../panel-plugin/eyes.desktop.in.h:2
-msgid "Eyes that spy on you"
-msgstr "Вочы, якія сочаць за вамі"
