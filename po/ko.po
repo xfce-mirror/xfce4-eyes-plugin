@@ -8,32 +8,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 06:32+0200\n"
-"PO-Revision-Date: 2019-08-02 04:32+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
-"Language-Team: Korean (http://www.transifex.com/xfce/xfce-panel-plugins/language/ko/)\n"
+"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"PO-Revision-Date: 2013-07-03 18:59+0000\n"
+"Last-Translator: ByungHyun Choi <byunghyun.choi@debianusers.org>, 2005\n"
+"Language-Team: Korean (http://app.transifex.com/xfce/xfce-panel-plugins/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:365
 msgid "Eyes"
 msgstr "눈동자"
 
-#: ../panel-plugin/eyes.c:370
+#: ../panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "닫기(_C)"
 
-#: ../panel-plugin/eyes.c:387
+#: ../panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "테마선택(_S):"
 
-#: ../panel-plugin/eyes.c:423
+#: ../panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "다중 행 패널에서 단일 행 사용(_R)"
-
-#: ../panel-plugin/eyes.desktop.in.h:2
-msgid "Eyes that spy on you"
-msgstr "당신을 감시하는 눈동자"
