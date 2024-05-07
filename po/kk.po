@@ -8,32 +8,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-02 06:32+0200\n"
-"PO-Revision-Date: 2020-02-02 14:42+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
-"Language-Team: Kazakh (http://www.transifex.com/xfce/xfce-panel-plugins/language/kk/)\n"
+"POT-Creation-Date: 2024-05-07 00:59+0200\n"
+"PO-Revision-Date: 2013-07-03 18:59+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010\n"
+"Language-Team: Kazakh (http://app.transifex.com/xfce/xfce-panel-plugins/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../panel-plugin/eyes.c:367 ../panel-plugin/eyes.desktop.in.h:1
+#: ../panel-plugin/eyes.c:365
 msgid "Eyes"
 msgstr "Көздер"
 
-#: ../panel-plugin/eyes.c:370
+#: ../panel-plugin/eyes.c:368
 msgid "_Close"
 msgstr "_Жабу"
 
-#: ../panel-plugin/eyes.c:387
+#: ../panel-plugin/eyes.c:385
 msgid "_Select a theme:"
 msgstr "_Теманы таңдаңыз:"
 
-#: ../panel-plugin/eyes.c:423
+#: ../panel-plugin/eyes.c:421
 msgid "Use single _row in multi-row panel"
 msgstr "Бірнеше қатарлы панельде бір қа_тарды қолдану"
-
-#: ../panel-plugin/eyes.desktop.in.h:2
-msgid "Eyes that spy on you"
-msgstr "Сізге бақылайтын көздер"
