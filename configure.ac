@@ -9,7 +9,7 @@ XDT_VERSION_INIT([4.6.0], [git])
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2006-2020 The Xfce development team])
+AC_COPYRIGHT([Copyright (c) 2006-2024 The Xfce development team])
 AC_INIT([xfce4-eyes-plugin], [xdt_version], [https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin/], [xfce4-eyes-plugin])
 AC_PREREQ([2.69])
 AC_CONFIG_MACRO_DIRS([m4])
