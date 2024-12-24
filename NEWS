@@ -1,3 +1,9 @@
+4.6.2 (2024-12-24)
+=====
+- scan-build: Add false postive file
+- Revert "scan-build: Fix deadcode.DeadStores"
+
+
 4.6.1 (2024-12-24)
 =====
 - Update copyright year
