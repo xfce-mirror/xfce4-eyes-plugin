@@ -1,3 +1,25 @@
+4.6.1 (2024-12-24)
+=====
+- Update copyright year
+- build: Bump dependency versions and fix deprecation warnings
+- scan-build: Fix deadcode.DeadStores
+- I18n: Update po/LINGUAS list
+- build: Use XDT_VERSION_INIT and get rid of configure.ac.in
+- build: Switch from intltool to gettext
+- build: Add GLib requirement
+- Fix make distcheck
+- Translation Updates:
+  Albanian, Amharic, Arabic, Armenian (Armenia), Asturian, Basque,
+  Belarusian, Bulgarian, Catalan, Chinese (China), Chinese (Taiwan),
+  Croatian, Czech, Danish, Dutch, Eastern Armenian, English
+  (Australia), English (Canada), English (United Kingdom), Estonian,
+  Finnish, French, Galician, German, Greek, Hebrew, Hindi, Hungarian,
+  Icelandic, Indonesian, Interlingue, Irish, Italian, Japanese, Kazakh,
+  Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål, Occitan (post
+  1500), Polish, Portuguese, Portuguese (Brazil), Romanian, Russian,
+  Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish,
+  Ukrainian, Urdu, Urdu (Pakistan), Uyghur
+
 4.6.0 (2022-04-04)
 =====
 - Add Chibi theme (!4)
