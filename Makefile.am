@@ -19,4 +19,10 @@ ChangeLog: Makefile
 	&& mv .changelog.tmp ChangeLog; rm -f .changelog.tmp) \
 	|| (touch ChangeLog; echo 'Git directory not found: installing possibly empty changelog.' >&2)
 
+EXTRA_DIST = 								\
+	meson.build							\
+	po/meson.build							\
+	xfce-revision.h.in 						\
+	$(NULL)
+
 dist-hook: ChangeLog
