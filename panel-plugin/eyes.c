@@ -25,6 +25,9 @@
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #ifdef HAVE_MATH_H
 #include <math.h>
@@ -424,6 +427,34 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
 
 
 
+static void
+eyes_show_about (XfcePanelPlugin *plugin,
+                 EyesPlugin      *eyes)
+{
+    const gchar *auth[] = {
+        "Andre Miranda <andre42m@gmail.com>",
+        "Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>",
+        "Danny Milosavljevic <danny_milo@gmx.net>",
+        "Dave Camp <dave@davec.dhs.org>",
+        "Davyd Madeley <davyd@madeley.id.au>",
+        "Harald Judt <h.judt@gmx.at>",
+        "Nick Schermer <nick@xfce.org>",
+        NULL
+    };
+
+    gtk_show_about_dialog (NULL,
+        "logo-icon-name", "xfce4-eyes",
+        "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
+        "version", VERSION_FULL,
+        "program-name", PACKAGE_NAME,
+        "comments", _("Eyes that spy on you"),
+        "website", PACKAGE_URL,
+        "copyright", "Copyright \302\251 2006-2025 The Xfce development team",
+        "authors", auth, NULL);
+}
+
+
+
 /******************************
  *** Panel Plugin Functions ***
  ******************************/
@@ -628,6 +659,10 @@ eyes_construct (XfcePanelPlugin *plugin)
     xfce_panel_plugin_menu_show_configure (plugin);
     g_signal_connect (plugin, "configure-plugin",
                       G_CALLBACK (eyes_properties_dialog), eyes);
+
+    xfce_panel_plugin_menu_show_about (plugin);
+    g_signal_connect (plugin, "about",
+                      G_CALLBACK (eyes_show_about), eyes);
 
     gtk_container_add (GTK_CONTAINER (plugin), eyes->ebox);
 
