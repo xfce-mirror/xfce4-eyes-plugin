@@ -3,6 +3,7 @@ plugin_sources = [
   'eyes.h',
   'themes.c',
   'themes.h',
+  xfce_revision_h,
 ]
 
 plugin_install_subdir = 'xfce4' / 'panel' / 'plugins'
