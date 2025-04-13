@@ -13,11 +13,17 @@ libeyes_la_SOURCES =					\
 	themes.c
 
 libeyes_la_CFLAGS =						\
+	$(GLIB_CFLAGS)						\
+	$(GTK_CFLAGS)						\
 	$(LIBXFCE4UI_CFLAGS)				\
+	$(LIBXFCE4UTIL_CFLAGS)				\
 	$(LIBXFCE4PANEL_CFLAGS)
 
 libeyes_la_LIBADD =						\
+	$(GLIB_LIBS)						\
+	$(GTK_LIBS)							\
 	$(LIBXFCE4PANEL_LIBS)				\
+	$(LIBXFCE4UTIL_LIBS)				\
 	$(LIBXFCE4UI_LIBS)
 
 libeyes_la_LDFLAGS =					\
