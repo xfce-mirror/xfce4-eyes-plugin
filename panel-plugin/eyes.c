@@ -449,7 +449,7 @@ eyes_show_about (XfcePanelPlugin *plugin,
         "program-name", PACKAGE_NAME,
         "comments", _("Eyes that spy on you"),
         "website", PACKAGE_URL,
-        "copyright", "Copyright \302\251 2006-2025 The Xfce development team",
+        "copyright", "Copyright \302\251 2006-" COPYRIGHT_YEAR " The Xfce development team",
         "authors", auth, NULL);
 }
 
