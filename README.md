@@ -45,20 +45,15 @@ requirement. When you're using the panel provided by the package
 management system of your distribution, then the prefix is in most
 cases /usr, otherwise the default prefix is /usr/local.
 
-If you want to install the current version from git, execute the
-following command in the plugin project directory (make sure you have
-GNU automake installed!):
+If you want to install the current version from git or a tarball
+downloaded from https://archive.xfce.org/, execute the
+following command in the plugin project directory:
 
-a) `./autogen.sh --prefix=/usr`
+```sh
+meson setup build
+```
 
-If an error about a missing `ltmain.sh` occurs, try `autoreconf -i`.
-
-Otherwise, if you've downloaded the tarball from e.g.
-https://archive.xfce.org/, issue the following command:
-
-b) `./configure --prefix=/usr`
-
-If a) or b) fail, you should receive an error message telling you
+If this fails, you should receive an error message telling you
 the cause for the failure (e.g. missings libraries). If you're missing
 a dependency you need to install it using the package management
 system of your distribution. Distributions commonly have two versions
@@ -70,18 +65,30 @@ is not, so better check this.
 Note: To solve distribution-specific problems the most efficient way
 is to ask at a forum for your distribution, not on a general forum.
 
-Then for both cases: `make`
+Then do:
+
+```sh
+meson compile -C build
+```
 
 If this fails, create an issue on
 https://gitlab.xfce.org/panel-plugins/xfce4-eyes-plugin, or send a mail
 to the xfce mailing list and provide make output.
 
-Finally, and usually as root: `make install`
+Finally, and usually as root:
+
+```sh
+meson install -C build
+```
 
 Note: Depending on your prefix, this might overwrite an existing
 version of the plugin.
 
-You can later uninstall the plugin (as root) with: `make uninstall`
+You can later uninstall the plugin (as root) with:
+
+```sh
+meson uninstall
+```
 
 The panel should then recognize the new plugin, if it doesn't try to
 restart it using `xfce4-panel -r`. If it still doesn't work after that
