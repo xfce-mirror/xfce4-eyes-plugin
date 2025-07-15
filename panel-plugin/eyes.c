@@ -304,8 +304,6 @@ eyes_properties_dialog_response (GtkWidget  *dlg,
                                  gint        response,
                                  EyesPlugin *eyes)
 {
-    xfce_panel_plugin_unblock_menu (eyes->plugin);
-
     eyes_write_rc_file (eyes->plugin, eyes);
 
     gtk_widget_destroy (dlg);
@@ -358,13 +356,18 @@ eyes_properties_dialog (XfcePanelPlugin *plugin,
     gchar       *current;
     const gchar *entry;
 
-    xfce_panel_plugin_block_menu (plugin);
+    if (eyes->settings_dialog != NULL)
+    {
+        gtk_window_present (GTK_WINDOW (eyes->settings_dialog));
+        return;
+    }
 
-    dlg = xfce_titled_dialog_new_with_mixed_buttons (_("Eyes"),
+    eyes->settings_dialog = dlg = xfce_titled_dialog_new_with_mixed_buttons (_("Eyes"),
         GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
         GTK_DIALOG_DESTROY_WITH_PARENT,
         "window-close", _("_Close"), GTK_RESPONSE_OK,
         NULL);
+    g_object_add_weak_pointer (G_OBJECT (dlg), (gpointer *) &eyes->settings_dialog);
 
     gtk_window_set_position (GTK_WINDOW (dlg), GTK_WIN_POS_CENTER);
     gtk_window_set_icon_name (GTK_WINDOW (dlg), "xfce4-settings");
