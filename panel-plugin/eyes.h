@@ -29,6 +29,7 @@ typedef struct
     GtkWidget          *ebox;
 
     /* Properties */
+    GtkWidget          *settings_dialog;
     gchar              *active_theme;
 
     /* Plugin */
