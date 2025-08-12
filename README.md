@@ -87,7 +87,7 @@ version of the plugin.
 You can later uninstall the plugin (as root) with:
 
 ```sh
-meson uninstall
+ninja uninstall -C build
 ```
 
 The panel should then recognize the new plugin, if it doesn't try to
