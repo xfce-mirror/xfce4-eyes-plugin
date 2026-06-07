@@ -38,4 +38,4 @@ msgstr "Ve ví_ceřádkovém panelu použít pouze jeden řádek"
 
 #: panel-plugin/eyes.desktop.in:6
 msgid "Eyes that spy on you"
-msgstr "Oči, které Vás sledují"
+msgstr "Oči, které vás sledují"
