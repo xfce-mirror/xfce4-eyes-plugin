@@ -39,9 +39,8 @@ parse_theme_file (EyesPlugin *eyes,
 {
     gchar line_buf [512]; /* prolly overkill */
     gchar *token;
-    fgets (line_buf, 512, theme_file);
 
-    while (!feof (theme_file)) {
+    while (fgets (line_buf, 512, theme_file) != NULL && feof (theme_file) == 0) {
         token = strtok (line_buf, "=");
         if (g_str_has_prefix (token, "wall-thickness"))
         {
@@ -79,8 +78,6 @@ parse_theme_file (EyesPlugin *eyes,
                                                     eyes->theme_dir,
                                                     token);
         }
-
-        fgets (line_buf, 512, theme_file);
     }
 }
 
