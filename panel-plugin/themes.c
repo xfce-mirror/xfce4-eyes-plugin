@@ -66,8 +66,7 @@ parse_theme_file (EyesPlugin *eyes,
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
-            if (eyes->eye_filename != NULL)
-                g_free (eyes->eye_filename);
+            g_free (eyes->eye_filename);
             eyes->eye_filename = g_strdup_printf ("%s%s",
                                                   eyes->theme_dir,
                                                   token);
@@ -76,8 +75,7 @@ parse_theme_file (EyesPlugin *eyes,
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
-            if (eyes->pupil_filename != NULL)
-                g_free (eyes->pupil_filename);
+            g_free (eyes->pupil_filename);
             eyes->pupil_filename = g_strdup_printf ("%s%s",
                                                     eyes->theme_dir,
                                                     token);
