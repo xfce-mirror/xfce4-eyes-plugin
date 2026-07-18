@@ -225,12 +225,7 @@ setup_eyes (EyesPlugin *eyes)
 {
     int i;
 
-    if (eyes->hbox != NULL)
-    {
-        gtk_widget_destroy (eyes->hbox);
-        eyes->hbox = NULL;
-    }
-
+    g_clear_pointer (&eyes->hbox, gtk_widget_destroy);
     eyes->hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_container_add (GTK_CONTAINER (eyes->align), GTK_WIDGET (eyes->hbox));
 
@@ -533,11 +528,7 @@ eyes_read_rc_file (XfcePanelPlugin *plugin,
     gchar       *file;
     gchar const *tmp;
 
-    if (eyes->active_theme != NULL)
-    {
-        g_free (eyes->active_theme);
-        eyes->active_theme = NULL;
-    }
+    g_clear_pointer (&eyes->active_theme, g_free);
 
     if ((file = xfce_panel_plugin_lookup_rc_file (plugin)) != NULL)
     {
