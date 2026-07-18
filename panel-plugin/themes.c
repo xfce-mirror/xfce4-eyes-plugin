@@ -39,51 +39,45 @@ parse_theme_file (EyesPlugin *eyes,
 {
     gchar line_buf [512]; /* prolly overkill */
     gchar *token;
-    fgets (line_buf, 512, theme_file);
 
-    while (!feof (theme_file)) {
+    while (fgets (line_buf, 512, theme_file) != NULL) {
         token = strtok (line_buf, "=");
-        if (strncmp (token, "wall-thickness",
-                 strlen ("wall-thickness")) == 0)
+        if (g_str_has_prefix (token, "wall-thickness"))
         {
             token += strlen ("wall-thickness");
-            while (!isdigit (*token))
+            while (token != NULL && !g_ascii_isdigit (*token))
             {
                 token++;
             }
             sscanf (token, "%d", &eyes->wall_thickness);
         }
-        else if (strncmp (token, "num-eyes", strlen ("num-eyes")) == 0)
+        else if (g_str_has_prefix (token, "num-eyes"))
         {
             token += strlen ("num-eyes");
-            while (!isdigit (*token))
+            while (token != NULL && !g_ascii_isdigit (*token))
             {
                 token++;
             }
             sscanf (token, "%d", &eyes->num_eyes);
         }
-        else if (strncmp (token, "eye-pixmap", strlen ("eye-pixmap")) == 0)
+        else if (g_str_has_prefix (token, "eye-pixmap"))
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
-            if (eyes->eye_filename != NULL)
-                g_free (eyes->eye_filename);
+            g_free (eyes->eye_filename);
             eyes->eye_filename = g_strdup_printf ("%s%s",
                                                   eyes->theme_dir,
                                                   token);
         }
-        else if (strncmp (token, "pupil-pixmap", strlen ("pupil-pixmap")) == 0)
+        else if (g_str_has_prefix (token, "pupil-pixmap"))
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
-            if (eyes->pupil_filename != NULL)
-                g_free (eyes->pupil_filename);
+            g_free (eyes->pupil_filename);
             eyes->pupil_filename = g_strdup_printf ("%s%s",
                                                     eyes->theme_dir,
                                                     token);
         }
-
-        fgets (line_buf, 512, theme_file);
     }
 }
 

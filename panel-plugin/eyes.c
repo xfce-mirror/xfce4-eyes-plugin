@@ -225,12 +225,7 @@ setup_eyes (EyesPlugin *eyes)
 {
     int i;
 
-    if (eyes->hbox != NULL)
-    {
-        gtk_widget_destroy (eyes->hbox);
-        eyes->hbox = NULL;
-    }
-
+    g_clear_pointer (&eyes->hbox, gtk_widget_destroy);
     eyes->hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_container_add (GTK_CONTAINER (eyes->align), GTK_WIDGET (eyes->hbox));
 
@@ -313,12 +308,8 @@ combobox_changed (GtkComboBox    *combobox,
                   EyesPlugin     *eyes)
 {
     gchar *selected = gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (combobox));
-
-    if (eyes->active_theme)
-        g_free (eyes->active_theme);
-
-    eyes->active_theme = g_strdup (selected);
-    g_free (selected);
+    g_free (eyes->active_theme);
+    eyes->active_theme = selected;
 
     properties_load (eyes);
     setup_eyes (eyes);
@@ -471,9 +462,7 @@ eyes_free_data (XfcePanelPlugin *plugin,
     g_free (eyes->eyes);
     g_free (eyes->pointer_last_x);
     g_free (eyes->pointer_last_y);
-
-    if (eyes->active_theme != NULL)
-        g_free (eyes->active_theme);
+    g_free (eyes->active_theme);
 
     if (eyes->eye_image != NULL)
         g_object_unref (G_OBJECT (eyes->eye_image));
@@ -481,18 +470,10 @@ eyes_free_data (XfcePanelPlugin *plugin,
     if (eyes->pupil_image != NULL)
         g_object_unref (G_OBJECT (eyes->pupil_image));
 
-    if (eyes->theme_dir != NULL)
-        g_free (eyes->theme_dir);
-
-    if (eyes->theme_name != NULL)
-        g_free (eyes->theme_name);
-
-    if (eyes->eye_filename != NULL)
-        g_free (eyes->eye_filename);
-
-    if (eyes->pupil_filename != NULL)
-        g_free (eyes->pupil_filename);
-
+    g_free (eyes->theme_dir);
+    g_free (eyes->theme_name);
+    g_free (eyes->eye_filename);
+    g_free (eyes->pupil_filename);
     gtk_widget_destroy (eyes->align);
     g_free (eyes);
 }
@@ -547,11 +528,7 @@ eyes_read_rc_file (XfcePanelPlugin *plugin,
     gchar       *file;
     gchar const *tmp;
 
-    if (eyes->active_theme != NULL)
-    {
-        g_free (eyes->active_theme);
-        eyes->active_theme = NULL;
-    }
+    g_clear_pointer (&eyes->active_theme, g_free);
 
     if ((file = xfce_panel_plugin_lookup_rc_file (plugin)) != NULL)
     {
