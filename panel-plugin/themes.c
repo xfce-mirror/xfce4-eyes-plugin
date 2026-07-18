@@ -45,7 +45,7 @@ parse_theme_file (EyesPlugin *eyes,
         if (g_str_has_prefix (token, "wall-thickness"))
         {
             token += strlen ("wall-thickness");
-            while (!g_ascii_isdigit (*token))
+            while (token != NULL && !g_ascii_isdigit (*token))
             {
                 token++;
             }
@@ -54,7 +54,7 @@ parse_theme_file (EyesPlugin *eyes,
         else if (g_str_has_prefix (token, "num-eyes"))
         {
             token += strlen ("num-eyes");
-            while (!g_ascii_isdigit (*token))
+            while (token != NULL && !g_ascii_isdigit (*token))
             {
                 token++;
             }
