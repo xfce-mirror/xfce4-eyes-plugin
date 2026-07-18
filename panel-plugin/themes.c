@@ -43,8 +43,7 @@ parse_theme_file (EyesPlugin *eyes,
 
     while (!feof (theme_file)) {
         token = strtok (line_buf, "=");
-        if (strncmp (token, "wall-thickness",
-                 strlen ("wall-thickness")) == 0)
+        if (g_str_has_prefix (token, "wall-thickness"))
         {
             token += strlen ("wall-thickness");
             while (!isdigit (*token))
@@ -53,7 +52,7 @@ parse_theme_file (EyesPlugin *eyes,
             }
             sscanf (token, "%d", &eyes->wall_thickness);
         }
-        else if (strncmp (token, "num-eyes", strlen ("num-eyes")) == 0)
+        else if (g_str_has_prefix (token, "num-eyes"))
         {
             token += strlen ("num-eyes");
             while (!isdigit (*token))
@@ -62,7 +61,7 @@ parse_theme_file (EyesPlugin *eyes,
             }
             sscanf (token, "%d", &eyes->num_eyes);
         }
-        else if (strncmp (token, "eye-pixmap", strlen ("eye-pixmap")) == 0)
+        else if (g_str_has_prefix (token, "eye-pixmap"))
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
@@ -71,7 +70,7 @@ parse_theme_file (EyesPlugin *eyes,
                                                   eyes->theme_dir,
                                                   token);
         }
-        else if (strncmp (token, "pupil-pixmap", strlen ("pupil-pixmap")) == 0)
+        else if (g_str_has_prefix (token, "pupil-pixmap"))
         {
             token = strtok (NULL, "\"");
             token = strtok (NULL, "\"");
