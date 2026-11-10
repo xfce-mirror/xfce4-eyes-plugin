@@ -433,7 +433,11 @@ eyes_show_about (XfcePanelPlugin *plugin,
         NULL
     };
 
+#if LIBXFCE4PANEL_CHECK_VERSION(4, 21, 4)
+    xfce_panel_gtk_show_about_dialog (
+#else
     gtk_show_about_dialog (NULL,
+#endif
         "logo-icon-name", "xfce4-eyes",
         "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
         "version", VERSION_FULL,
